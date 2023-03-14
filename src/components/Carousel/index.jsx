@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Box, IconButton, useBreakpointValue } from '@chakra-ui/react';
+import { Box, Heading, IconButton, Image, useBreakpointValue } from '@chakra-ui/react';
 // Here we have used react-icons package for the icons
 import { BiLeftArrowAlt, BiRightArrowAlt } from 'react-icons/bi';
 // And react-slick as our Carousel Lib
@@ -7,7 +7,7 @@ import Slider from 'react-slick';
 
 // Settings for the slider
 const settings = {
-  dots: true,
+  dots: false,
   arrows: false,
   fade: true,
   infinite: true,
@@ -30,18 +30,20 @@ export default function Carousel() {
 
   // These are the images used in the slide
   const cards = [
-    'https://images.unsplash.com/photo-1612852098516-55d01c75769a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1yZWxhdGVkfDR8fHxlbnwwfHx8fA%3D%3D&auto=format&fit=crop&w=900&q=60',
-    'https://images.unsplash.com/photo-1627875764093-315831ac12f7?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1yZWxhdGVkfDJ8fHxlbnwwfHx8fA%3D%3D&auto=format&fit=crop&w=900&q=60',
-    'https://images.unsplash.com/photo-1571432248690-7fd6980a1ae2?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1yZWxhdGVkfDl8fHxlbnwwfHx8fA%3D%3D&auto=format&fit=crop&w=900&q=60',
+    'assets/img1.png',
+    'assets/img2.png',
+    'assets/img3.png',
+    'assets/img4.png',
   ];
 
   return (
     <Box
       position={'relative'}
-      height={'600px'}
+      height={'100vh'}
       width={'full'}
       overflow={'hidden'}>
       {/* CSS files for react-slick */}
+      <Heading textAlign={'center'} py={8}>Videostori Sample Video</Heading>
       <link
         rel="stylesheet"
         type="text/css"
@@ -56,7 +58,7 @@ export default function Carousel() {
       {/* Left Icon */}
       <IconButton
         aria-label="left-arrow"
-        colorScheme="messenger"
+        colorScheme="red"
         borderRadius="full"
         position="absolute"
         left={side}
@@ -69,7 +71,7 @@ export default function Carousel() {
       {/* Right Icon */}
       <IconButton
         aria-label="right-arrow"
-        colorScheme="messenger"
+        colorScheme="red"
         borderRadius="full"
         position="absolute"
         right={side}
@@ -84,13 +86,12 @@ export default function Carousel() {
         {cards.map((url, index) => (
           <Box
             key={index}
-            height={'6xl'}
+            height={'lg'}
             position="relative"
             backgroundPosition="center"
             backgroundRepeat="no-repeat"
-            backgroundSize="cover"
             backgroundImage={`url(${url})`}
-          />
+          />    
         ))}
       </Slider>
     </Box>

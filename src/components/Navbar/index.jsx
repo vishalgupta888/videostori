@@ -14,6 +14,7 @@ import {
     useColorModeValue,
     useBreakpointValue,
     useDisclosure,
+    Image,
   } from '@chakra-ui/react';
   import {
     HamburgerIcon,
@@ -30,7 +31,7 @@ import {
         <Flex
           bg={useColorModeValue('white', 'gray.800')}
           color={useColorModeValue('gray.600', 'white')}
-          minH={'60px'}
+          minH={'100px'}
           py={{ base: 2 }}
           px={{ base: 4 }}
           borderBottom={1}
@@ -51,14 +52,13 @@ import {
             />
           </Flex>
           <Flex flex={{ base: 1 }} justify={{ base: 'center', md: 'start' }}>
-            <Text
-              textAlign={useBreakpointValue({ base: 'center', md: 'left' })}
-              fontFamily={'heading'}
-              color={useColorModeValue('gray.800', 'white')}>
-              Logo
-            </Text>
+          <Image
+          h='70px'
+          w='170px'
+          src='assets/videoLogo.jpg'
+          />
   
-            <Flex display={{ base: 'none', md: 'flex' }} ml={10}>
+            <Flex display={{ base: 'none', md: 'flex' }} align='center' pl={'180px'}>
               <DesktopNav />
             </Flex>
           </Flex>
@@ -69,25 +69,28 @@ import {
             direction={'row'}
             spacing={6}>
             <Button
-              as={'a'}
-              fontSize={'sm'}
+              display={{ base: 'none', md: 'inline-flex' }}
+              fontSize={'md'}
               fontWeight={400}
               variant={'link'}
+              border='2px'
+              color={'red'}
+              borderColor={'red'}
+              px={4}
               href={'#'}>
-              Sign In
+              Login
             </Button>
             <Button
-              as={'a'}
               display={{ base: 'none', md: 'inline-flex' }}
-              fontSize={'sm'}
+              fontSize={'md'}
               fontWeight={600}
               color={'white'}
-              bg={'pink.400'}
+              bg={'red'}
               href={'#'}
               _hover={{
-                bg: 'pink.300',
+                cursor: 'pointer',
               }}>
-              Sign Up
+              Signup
             </Button>
           </Stack>
         </Flex>
@@ -113,8 +116,8 @@ import {
                 <Link
                   p={2}
                   href={navItem.href ?? '#'}
-                  fontSize={'sm'}
-                  fontWeight={500}
+                  fontSize={'lg'}
+                  fontWeight={700}
                   color={linkColor}
                   _hover={{
                     textDecoration: 'none',
@@ -163,7 +166,6 @@ import {
               fontWeight={500}>
               {label}
             </Text>
-            <Text fontSize={'sm'}>{subLabel}</Text>
           </Box>
           <Flex
             transition={'all .3s ease'}
@@ -246,41 +248,37 @@ import {
   
   const NAV_ITEMS = [
     {
-      label: 'Inspiration',
-      children: [
-        {
-          label: 'Explore Design Work',
-          subLabel: 'Trending Design to inspire you',
-          href: '#',
-        },
-        {
-          label: 'New & Noteworthy',
-          subLabel: 'Up-and-coming Designers',
-          href: '#',
-        },
-      ],
+      label: 'Home'
     },
     {
-      label: 'Find Work',
+      label: 'Interactive Videos',
       children: [
         {
           label: 'Job Board',
-          subLabel: 'Find your dream design job',
           href: '#',
         },
         {
           label: 'Freelance Projects',
-          subLabel: 'An exclusive list for contract work',
           href: '#',
         },
       ],
     },
     {
-      label: 'Learn Design',
+      label: 'Features',
+      children: [
+        {
+          label: 'Explore Design Work',
+          href: '#',
+        },
+        {
+          label: 'New & Noteworthy',
+          href: '#',
+        },
+      ],
       href: '#',
     },
     {
-      label: 'Hire Designers',
+      label: 'Blog',
       href: '#',
     },
   ];
