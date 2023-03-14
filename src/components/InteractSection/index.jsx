@@ -1,15 +1,6 @@
 import React from "react";
-import {
-  Text,
-  SimpleGrid,
-  Center,
-  Heading,
-  Box,
-  Card,
-  Circle,
-  Stack,
-  VStack,
-} from "@chakra-ui/react";
+import { Text, SimpleGrid, Center, Heading, Box, Circle, Stack, VStack} from "@chakra-ui/react";
+import { TriangleUpIcon } from "@chakra-ui/icons";
 
 const CARDS = [
   {
@@ -56,24 +47,6 @@ const CARDS = [
   },
 ];
 
-function reveal() {
-  var reveals = document.querySelectorAll(".reveal");
-
-  for (var i = 0; i < reveals.length; i++) {
-    var windowHeight = window.innerHeight;
-    var elementTop = reveals[i].getBoundingClientRect().top;
-    var elementVisible = 150;
-
-    if (elementTop < windowHeight - elementVisible) {
-      reveals[i].classList.add("active");
-    } else {
-      reveals[i].classList.remove("active");
-    }
-  }
-}
-
-window.addEventListener("scroll", reveal);
-
 const InteractSection = (props) => {
   return (
     <>
@@ -90,29 +63,40 @@ const InteractSection = (props) => {
           </Center>
         </Box>
 
-        <SimpleGrid columns={[1, 6]} spacing={0}>
+        <SimpleGrid
+          columns={[1, 6]}
+          spacing={0}
+          bgImage="url('http://web.msdi.in/wp-content/uploads/2022/12/work-process-line.png')"
+          bgRepeat="no-repeat"
+        >
           {CARDS.map((item) => {
             return (
-              <Box key={item?.id} p={[0, 6]} py={30}>
-                <Stack py={5} alignItems={["right", "center"]}>
+              <Box
+                key={item?.id}
+                p={[0, 6]}
+                py={30}
+                _hover={{ div: { color: "#f54444"} }}
+              >
+                <Stack pb={8} alignItems={["right", "center"]}>
                   <Circle
                     size="80px"
                     border="10px solid white"
                     boxShadow="2xl"
                     bg="#f54444"
-                    color="white"
                   >
                     <Text fontSize="30px" fontWeight="bold">
                       {item?.number}
                     </Text>
                   </Circle>
                 </Stack>
-                <Box
+
+                <Stack
                   borderRadius="5px"
                   w={["auto", 200]}
-                  p={4}
+                  p={6}
                   bg="#f7f7f9"
                   _hover={{ bg: "#f54444", color: "#fff" }}
+                  position="relative"
                 >
                   <VStack
                     color="#1b1f2e"
@@ -127,7 +111,11 @@ const InteractSection = (props) => {
                       {item?.paragraph}
                     </Text>
                   </VStack>
-                </Box>
+                  <Box position="absolute" top="-30px" color="#f7f7f9">
+                    <TriangleUpIcon w={8} h={8} />
+                  </Box>
+                </Stack>
+                
               </Box>
             );
           })}
@@ -135,16 +123,6 @@ const InteractSection = (props) => {
       </Box>
     </>
   );
-};
-
-const styles = {
-  heading: {
-    color: "#1b1f2e",
-    _hover: "#fff",
-  },
-  paragraph: {
-    color: "#8394be",
-  },
 };
 
 export default InteractSection;
