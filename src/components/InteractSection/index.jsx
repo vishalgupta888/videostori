@@ -75,14 +75,15 @@ const InteractSection = (props) => {
                 key={item?.id}
                 p={[0, 6]}
                 py={30}
-                _hover={{ div: { color: "#f54444"} }}
+                _hover={{ div: { color: "#2D2727"} }}
               >
                 <Stack pb={8} alignItems={["right", "center"]}>
                   <Circle
                     size="80px"
                     border="10px solid white"
                     boxShadow="2xl"
-                    bg="#f54444"
+                    bg="#f7f7f9"
+                    color="#f54444"
                   >
                     <Text fontSize="30px" fontWeight="bold">
                       {item?.number}
@@ -111,8 +112,8 @@ const InteractSection = (props) => {
                       {item?.paragraph}
                     </Text>
                   </VStack>
-                  <Box position="absolute" top="-30px" color="#f7f7f9">
-                    <TriangleUpIcon w={8} h={8} />
+                  <Box position="absolute" top="-30px">
+                    <TriangleUpIcon  color="#f54444" w={8} h={8} />
                   </Box>
                 </Stack>
                 
