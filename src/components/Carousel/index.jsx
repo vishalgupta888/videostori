@@ -7,6 +7,7 @@ import {
   Image,
   Spacer,
   Text,
+  Icon,
   useBreakpointValue,
 } from "@chakra-ui/react";
 import { BiLeftArrowAlt, BiRightArrowAlt } from "react-icons/bi";
@@ -121,10 +122,14 @@ export default function Carousel() {
               >
                 {item.desc}
               </Text>
-              <Box display={'flex'} fontWeight='bold' alignItems={'center'} width='100%'>
-              <BsCheckCircle />
+              <Box display={'flex'} fontWeight='bold' width='100%'>
+              <Icon 
+              boxSize={8} 
+              color='red.500'
+              ><BsCheckCircle />
+              </Icon>
               <Text
-              px={['10px']}
+              px='7px'
               >
                 {item.actions}
                 </Text>
