@@ -121,10 +121,10 @@ export default function Carousel() {
               >
                 {item.desc}
               </Text>
-              <Box display={'flex'} fontWeight='bold' alignItems={'center'} justifyContent='space-between' width={['100%','70%']}>
+              <Box display={'flex'} fontWeight='bold' alignItems={'center'} width='100%'>
               <BsCheckCircle />
               <Text
-              px={['10px', '0']}
+              px={['10px']}
               >
                 {item.actions}
                 </Text>
