@@ -1,17 +1,16 @@
 import React, { useState } from 'react';
-import { Box, Heading, IconButton, Image, useBreakpointValue } from '@chakra-ui/react';
-// Here we have used react-icons package for the icons
+import { Box, Flex, Heading, IconButton, Image, Spacer, Text, useBreakpointValue } from '@chakra-ui/react';
 import { BiLeftArrowAlt, BiRightArrowAlt } from 'react-icons/bi';
-// And react-slick as our Carousel Lib
 import Slider from 'react-slick';
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 
-// Settings for the slider
 const settings = {
   dots: false,
-  arrows: false,
+  arrows: true,
   fade: true,
   infinite: true,
-  autoplay: true,
+  autoplay: false,
   speed: 500,
   autoplaySpeed: 5000,
   slidesToShow: 1,
@@ -19,43 +18,26 @@ const settings = {
 };
 
 export default function Carousel() {
-  // As we have used custom buttons, we need a reference variable to
-  // change the state
+
   const [slider, setSlider] = useState(null);
-
-  // These are the breakpoints which changes the position of the
-  // buttons as the screen size changes
   const top = useBreakpointValue({ base: '90%', md: '50%' });
-  const side = useBreakpointValue({ base: '30%', md: '10px' });
+  const side = useBreakpointValue({ base: '30%', md: '5px' });
 
-  // These are the images used in the slide
   const cards = [
-    'assets/img1.png',
-    'assets/img2.png',
-    'assets/img3.png',
-    'assets/img4.png',
+    {img : 'assets/img1.png', label: 'Quit boring survey and make them interactive like never before', desc: 'Interact with our switch timeline videos according to the interest and intent. Switch timeline is great feature where there is large amount of content and viewer has the power to define the path of the story'},
+    {img : 'assets/img2.png', label: 'Now brand can use Videos to Personalize the Shopping Experience',desc: 'Interact with our switch timeline videos according to the interest and intent. Switch timeline is great feature where there is large amount of content and viewer has the power to define the path of the story'},
+    {img : 'assets/img3.png', label: 'Use Interactive Videos and start making leads',desc: 'Interact with our switch timeline videos according to the interest and intent. Switch timeline is great feature where there is large amount of content and viewer has the power to define the path of the story'},
+    {img : 'assets/img4.png', label: 'Use Hotspots in your Videos and create the magic',desc: 'Interact with our switch timeline videos according to the interest and intent. Switch timeline is great feature where there is large amount of content and viewer has the power to define the path of the story'},
+    {img : 'assets/img5.png', label: 'Rewind and Fast-Forward',desc: 'Interact with our switch timeline videos according to the interest and intent. Switch timeline is great feature where there is large amount of content and viewer has the power to define the path of the story'},
   ];
 
   return (
-    <Box
-      position={'relative'}
-      height={'100vh'}
-      width={'full'}
-      overflow={'hidden'}>
-      {/* CSS files for react-slick */}
-      <Heading textAlign={'center'} py={8}>Videostori Sample Video</Heading>
-      <link
-        rel="stylesheet"
-        type="text/css"
-        charSet="UTF-8"
-        href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.css"
-      />
-      <link
-        rel="stylesheet"
-        type="text/css"
-        href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick-theme.min.css"
-      />
-      {/* Left Icon */}
+    <Box position={'relative'}
+         height={['80vh','100vh']}
+         width={['100%','85%']}
+         m='0 auto'
+         overflow={'hidden'}>
+      <Heading textAlign={'center'} py={9}>Videostori Sample Video</Heading>
       <IconButton
         aria-label="left-arrow"
         colorScheme="red"
@@ -68,7 +50,6 @@ export default function Carousel() {
         onClick={() => slider?.slickPrev()}>
         <BiLeftArrowAlt />
       </IconButton>
-      {/* Right Icon */}
       <IconButton
         aria-label="right-arrow"
         colorScheme="red"
@@ -81,17 +62,22 @@ export default function Carousel() {
         onClick={() => slider?.slickNext()}>
         <BiRightArrowAlt />
       </IconButton>
-      {/* Slider */}
       <Slider {...settings} ref={(slider) => setSlider(slider)}>
-        {cards.map((url, index) => (
-          <Box
-            key={index}
-            height={'lg'}
+        {cards.map((item, index) => (
+          <Flex key={index}>
+          <Text pos={'relative'} top={['50px','180px']} width={['95%','40%']} ml={['5%','10%']} fontSize={['1rem','1.4rem']} fontWeight='bold'>{item.label}</Text>
+          <Image
+            src={item.img}
+            height={['300px', '100%']}
+            mt={['80px','0']}
+            ml={['5%','50%']}
+            width={['90%','40%']}
             position="relative"
+            backgroundSize={'cover'}
             backgroundPosition="center"
             backgroundRepeat="no-repeat"
-            backgroundImage={`url(${url})`}
-          />    
+          />
+          </Flex>
         ))}
       </Slider>
     </Box>
