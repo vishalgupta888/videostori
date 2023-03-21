@@ -55,7 +55,7 @@ import {
           <Image
           h='70px'
           w='170px'
-          src='assets/videoLogo.jpg'
+          src='/assets/videoLogo.jpg'
           />
   
             <Flex display={{ base: 'none', md: 'flex' }} align='center' pl={'180px'}>
@@ -248,18 +248,32 @@ import {
   
   const NAV_ITEMS = [
     {
-      label: 'Home'
+      label: 'Home',
+      href: '/'
     },
     {
       label: 'Interactive Videos',
+      href: '/interactive-video',
       children: [
         {
-          label: 'Job Board',
-          href: '#',
+          label: 'Lead Generation Videos',
+          href: '/interactive-video/lead-generation-videos/',
         },
         {
-          label: 'Freelance Projects',
-          href: '#',
+          label: 'Shoppable Videos',
+          href: '/interactive-video/shoppable-videos/',
+        },
+        {
+          label: 'Personalized Videos',
+          href: '/interactive-video/personalized-videos/',
+        },
+        {
+          label: 'Customer Survery Videos',
+          href: '/interactive-video/customer-survey-videos/',
+        },
+        {
+          label: 'App Acquistion',
+          href: '/app-acquistion-videos/',
         },
       ],
     },
