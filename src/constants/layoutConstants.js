@@ -40,3 +40,15 @@ export const perText = [
     
     }
 ]
+
+export const customerText = {
+    imageurl: '/assets/shop.png',
+    title: 'Make Customer Surveys Interesting and Collect Feedback',
+    description: 'Customer survey videos are videos that are created to collect  opinions or feedback from customers about a product, service, or business. Interactive Videos provide you a medium to explain the survey objectives in the form of a story thus encouraging viewers to participate and enable survey completions. The interactive videos may include graphics, animations, or other visuals to help convey the survey questions. The interactive Video surveys can also enable conditional questions based on viewers responses. This facilitates the viewers not to waste time on questions which are not relevant to him. The interactive video can also be used to do an online assessment of a viewer after the course completion and the answers can be provided real-time to the user as well as the examinee.These  videos can be an effective tool for gathering information and insights from to viewers, sharing them on a real-time basis with businesses and can help businesses make improvements and better meet the needs of their customers'
+}
+
+export const appText = {
+    imageurl: '/assets/lead2.png',
+    title: 'App Acquisition through an Interactive Video',
+    description: 'Apps provide a platform for the viewers where he can navigate his own journey and use them as he pleases but app acquisition is still done in a boring way through Display Ads mostly. When it is done through the Videos also the performance managers expect the users to search to various app stores and then download their apps which results in a fall-off. Videostori provides a medium wherein performance managers can do their app acquisition campaigns through the Interactive Videos. The businesses have to prepare a video on what their app is and the problem it will solve for the viewer and then at relevant positions a hotspot can be used to help viewers directly download the video after clicking on those hotspots. This will help take away the memory issues and prevent unnecessary fall-offs thus leading to better engagement and conversions.Click here to try the platform '
+}

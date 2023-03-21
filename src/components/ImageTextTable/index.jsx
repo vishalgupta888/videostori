@@ -3,7 +3,7 @@ import React, { useRef } from "react";
 import ImageSection from "../../patterns/ImageSection";
 import TextSection from "../../patterns/TextSection";
 
-const ImageTextTable = ({ imageTextdata, isColumnReverse, index }) => {
+const ImageTextTable = ({ imageTextdata, isVideo, index }) => {
     const ref = useRef(null);
 
     return (
