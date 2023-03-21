@@ -281,12 +281,20 @@ import {
       label: 'Features',
       children: [
         {
-          label: 'Explore Design Work',
-          href: '#',
+          label: 'Hot Spot',
+          href: 'features/hotspot/',
         },
         {
-          label: 'New & Noteworthy',
-          href: '#',
+          label: 'Switch Timeline',
+          href: 'features/switchtimeline/',
+        },
+        {
+          label: 'Video Distribution',
+          href: 'features/videodistribution/',
+        },
+        {
+          label: 'Reports-Analytics',
+          href: 'features/reportsanalytics/',
         },
       ],
       href: '#',

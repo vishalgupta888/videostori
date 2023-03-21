@@ -1,4 +1,5 @@
 import Banner from "@/patterns/Banner";
+import VideoPlayer from "@/patterns/VideoPlayer";
 import { Box, Flex, Heading, Text, Image } from "@chakra-ui/react";
 import React from "react";
 import { BiShapeSquare } from "react-icons/bi";
@@ -105,7 +106,23 @@ const InteractiveVideo = () => {
   return (
     <Box>
       <Banner title="Interactive Video" breadcrumb={breadcrumb} />
-      {/* <Flex
+      {/* <Flex w="100%" h="600px">
+        <Box w="50%" h="100%">
+          <VideoPlayer
+            h="100%"
+            w="100%"
+            m="auto"
+            videodata={{
+              thumbnail:
+                "http://web.msdi.in/wp-content/uploads/2023/02/Screenshot-2023-02-27-154922.png",
+              videosrc: "https://videostori.io/v/l1/IVx5Y2",
+            }}
+          />
+        </Box>
+        <Box w="50%"></Box>
+      </Flex> */}
+
+      <Flex
         minH="80vh"
         flexDir={["column", "row"]}
         justifyContent={"space-around"}
