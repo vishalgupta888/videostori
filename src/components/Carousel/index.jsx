@@ -100,7 +100,7 @@ export default function Carousel() {
       <Slider {...settings} ref={(slider) => setSlider(slider)}>
         {cards.map((item, index) => (
           <Box key={index} w="100%">
-            <Flex w="100%" direction={["column-reverse", "row"]}>
+            <Flex w="100%" h="400px" direction={["column-reverse", "row"]}>
               <Text
                 pos={"relative"}
                 width={["100%", "50%"]}
@@ -110,6 +110,14 @@ export default function Carousel() {
               >
                 {item.label}
               </Text>
+              <VideoPlayer
+                p={10}
+                width={["100%", "50%"]}
+                videodata={{
+                  thumbnail: item.img,
+                  videosrc: "https://videostori.io/v/l4/IVyEio",
+                }}
+              />
             </Flex>
           </Box>
         ))}
