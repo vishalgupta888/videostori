@@ -13,7 +13,6 @@ import { BiLeftArrowAlt, BiRightArrowAlt } from "react-icons/bi";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import VideoPlayer from "@/patterns/VideoPlayer";
 
 const settings = {
   dots: false,
@@ -110,6 +109,15 @@ export default function Carousel() {
               >
                 {item.label}
               </Text>
+              <Image
+                src={item.img}
+                p={10}
+                width={["100%", "50%"]}
+                position="relative"
+                backgroundSize={"cover"}
+                backgroundPosition="center"
+                backgroundRepeat="no-repeat"
+              />
             </Flex>
           </Box>
         ))}
