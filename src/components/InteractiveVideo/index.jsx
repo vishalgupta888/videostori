@@ -2,6 +2,8 @@ import Banner from "@/patterns/Banner";
 import { Box, Flex, Heading, Text, Image } from "@chakra-ui/react";
 import React from "react";
 import { BiShapeSquare } from "react-icons/bi";
+import ImageTextTable from "../ImageTextTable";
+import { interactText } from "@/constants/layoutConstants";
 
 const InteractiveVideo = () => {
   const breadcrumb = [
@@ -103,7 +105,7 @@ const InteractiveVideo = () => {
   return (
     <Box>
       <Banner title="Interactive Video" breadcrumb={breadcrumb} />
-      <Flex
+      {/* <Flex
         minH="80vh"
         flexDir={["column", "row"]}
         justifyContent={"space-around"}
@@ -130,7 +132,8 @@ const InteractiveVideo = () => {
           </Text>
         </Box>
         <Image h="400px" src="assets/interactive.png" />
-      </Flex>
+      </Flex> */}
+      <ImageTextTable imageTextdata={interactText} />
       <Box>
         <Heading textAlign={"center"}>
           Interactive video with interactive Elements
