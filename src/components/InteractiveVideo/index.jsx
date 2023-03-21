@@ -104,7 +104,7 @@ const InteractiveVideo = () => {
   return (
     <Box>
       <Banner title="Interactive Video" breadcrumb={breadcrumb} />
-      <Flex w="100%" h="600px">
+      {/* <Flex w="100%" h="600px">
         <Box w="50%" h="100%">
           <VideoPlayer
             h="100%"
@@ -118,7 +118,7 @@ const InteractiveVideo = () => {
           />
         </Box>
         <Box w="50%"></Box>
-      </Flex>
+      </Flex> */}
 
       <Flex
         minH="80vh"
