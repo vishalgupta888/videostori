@@ -279,22 +279,23 @@ import {
     },
     {
       label: 'Features',
+      href: "/features",
       children: [
         {
           label: 'Hot Spot',
-          href: 'features/hotspot/',
+          href: '/features/hotspot',
         },
         {
           label: 'Switch Timeline',
-          href: 'features/switchtimeline/',
+          href: '/features/switchtimeline',
         },
         {
           label: 'Video Distribution',
-          href: 'features/videodistribution/',
+          href: '/features/videodistribution',
         },
         {
           label: 'Reports-Analytics',
-          href: 'features/reportsanalytics/',
+          href: '/features/reportsanalytics',
         },
       ],
       href: '#',

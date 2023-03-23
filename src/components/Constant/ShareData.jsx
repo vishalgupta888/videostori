@@ -11,17 +11,17 @@ export const HOTSPOTTEXT = [
 
 export const HOTSPOTCARD1 = [
     {
-      img: '/assets/img2.png',
+      img: '/assets/click.png',
       heading: "Enable Click",
       paragraph: "Businesses can enable any portion of the screen or any product clickable by enabling an hotspot. This can help create a shoppable video, enables personalized and dynamic viewer experience, or gamify the video",
     },
     {
-      img: '/assets/img2.png',
+      img: '/assets/openlink.png',
       heading: "Open Link",
       paragraph: "This helps redirecting the user to the businesses website, enables downloading of a pdf, links to product or service detail pages for advanced user information",
     },
     {
-      img: '/assets/img2.png',
+      img: '/assets/feedback.png',
       heading: "Collect Feedback",
       paragraph: "Get the feedback or the opinion of the viewer by using the Collect Feedback button",
     },
@@ -29,17 +29,17 @@ export const HOTSPOTCARD1 = [
   
 export const HOTSPOTCARD2 = [
       {
-        img: '/assets/img2.png',
+        img: '/assets/videoic.png',
         heading: "Switch Video",
         paragraph: "Move on to a different video from the current video by using Switch Video  and create a dynamic, personalized and Interactive Viewing Experience",
       },
       {
-        img: '/assets/img2.png',
+        img: '/assets/message.png',
         heading: "Show Message",
         paragraph:"Share important information by displaying the message to the viewer on the click",
       },
       {
-        img: '/assets/img2.png',
+        img: '/assets/email.png',
         heading: "Start Email",
         paragraph: "Enables the Viewer to mail from their configured email program. By clicking the native email opens up on the device and the viewer can use it to email to the business",
       },
@@ -47,17 +47,17 @@ export const HOTSPOTCARD2 = [
   
 export const HOTSPOTCARD3 = [
       {
-        img: '/assets/img2.png',
+        img: '/assets/call.jpg',
         heading: "Start Call",
         paragraph: "Enables the viewer to make a call by clicking on this hotspot Open an Image: Enables",
       },
       {
-        img: '/assets/img2.png',
+        img: '/assets/gallary.png',
         heading: "Open an Image",
         paragraph: "Enables the viewers to learn more by pausing the video and opening an image",
       },
       {
-        img: '/assets/img2.png',
+        img: '/assets/hotspot.png',
         heading: "Hotspot Timeline",
         paragraph: "Enables navigation of the video from one timeline to another timeline in the same video session",
       },
@@ -65,12 +65,12 @@ export const HOTSPOTCARD3 = [
   
 export const HOTSPOTCARD4 = [
       {
-        img: '/assets/img2.png',
+        img: '/assets/appdown.png',
         heading: "Download App",
         paragraph: "Quickly enables download of an app by clicking on the relevant Hotspot",
       },
       {
-        img: '/assets/img2.png',
+        img: '/assets/game.png',
         heading: "Gamify the Video",
         paragraph: "Track Viewer behavior and his clicks and gamify the Video",
       },

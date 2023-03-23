@@ -2,6 +2,7 @@ import React from "react";
 import {HOTSPOTTEXT, HOTSPOTCARD1, HOTSPOTCARD2, HOTSPOTCARD3, HOTSPOTCARD4} from "@/components/Constant/ShareData";
 import { Box, Center, SimpleGrid, Text, Stack, Image, Heading, Card, CardBody} from "@chakra-ui/react";
 import Banner from '@/patterns/Banner';
+import VideoPlayer from "@/patterns/VideoPlayer";
 
 const breadcrumb = [
   { text: "Home", link: "/" },
@@ -17,7 +18,14 @@ const HotSpot = () => {
           {HOTSPOTTEXT.map((item, index) => (
             <>
               <Box key={index}>
-                <Image src={item.img} />
+                <VideoPlayer
+                  p={10}
+                  h='100%'
+                  videodata={{
+                    thumbnail: item.img,
+                    videosrc: "https://videostori.io/v/l4/IVyEio",
+                  }}
+                />
               </Box>
               <Box key={index} px={10} alignItems='center'>
                 <Heading pb={15} color={'gray.700'} size={['md', '2xl']}>{item.heading}</Heading>
@@ -42,8 +50,9 @@ const HotSpot = () => {
                   direction={{ base: "column", sm: "row" }}
                   overflow="hidden"
                   boxShadow={"2xl"}
+                  p={2}
                 >
-                  <Image src="/assets/img3.png" maxW={{ base: "100%", sm: "200px" }}  />
+                  <Image src={item.img} w={100} h={100} my="auto"></Image>
                   <Stack>
                     <CardBody>
                       <Heading size="md" color={'gray.700'}>{item.heading}</Heading>
@@ -72,8 +81,9 @@ const HotSpot = () => {
                   direction={{ base: "column", sm: "row" }}
                   overflow="hidden"
                   boxShadow={"2xl"}
+                  p={2}
                 >
-                  <Image src="/assets/img3.png" maxW={{ base: "100%", sm: "200px" }}  />
+                  <Image src={item.img} w={100} h={100} my="auto"></Image>
                   <Stack>
                     <CardBody>
                       <Heading size="md" color={'gray.700'}>{item.heading}</Heading>
@@ -96,8 +106,9 @@ const HotSpot = () => {
                   direction={{ base: "column", sm: "row" }}
                   overflow="hidden"
                   boxShadow={"2xl"}
+                  p={2}
                 >
-                  <Image src="/assets/img3.png" maxW={{ base: "100%", sm: "200px" }}  />
+                  <Image src={item.img} w={100} h={100} my="auto"></Image>
                   <Stack>
                     <CardBody>
                       <Heading size="md" color={'gray.700'}>{item.heading}</Heading>
@@ -126,8 +137,9 @@ const HotSpot = () => {
                   direction={{ base: "column", sm: "row" }}
                   overflow="hidden"
                   boxShadow={"2xl"}
+                  p={2}
                 >
-                  <Image src="/assets/img3.png" maxW={{ base: "100%", sm: "200px" }}  />
+                  <Image src={item.img} w={100} h={100} my="auto"></Image>
                   <Stack>
                     <CardBody>
                       <Heading size="md" color={'gray.700'}>{item.heading}</Heading>
