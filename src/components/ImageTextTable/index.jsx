@@ -1,5 +1,5 @@
 import VideoPlayer from "@/patterns/VideoPlayer";
-import { Box, Flex,  } from "@chakra-ui/react";
+import { Flex } from "@chakra-ui/react";
 import React, { useRef } from "react";
 import ImageSection from "../../patterns/ImageSection";
 import TextSection from "../../patterns/TextSection";
@@ -12,12 +12,15 @@ const ImageTextTable = ({ imageTextdata, isVideo, index }) => {
             minH={["auto", "100vh"]}
             w="100%"
             direction={["column", "row"]}
+            justifyContent="space-around"
             p="2vw"
             ref={ref}
         >
           { isVideo ? <VideoPlayer
                 p={10}
-                width={["100%", "50%"]}
+                width={["100%", "40%"]}
+                height={["35vh","50vh"]}
+                alignSelf="center"
                 videodata={{
                   thumbnail: imageTextdata.thumb,
                   videosrc: imageTextdata.src,

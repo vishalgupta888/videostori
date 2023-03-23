@@ -11,7 +11,6 @@ const TextSection = (props) => {
             h="100%"
             bg="cardBackground"
             direction={"column"}
-            textAlign="center"
             justifyContent="space-around"
             {...props}
         >
