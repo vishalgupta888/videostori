@@ -19,6 +19,26 @@ import {
 } from "@chakra-ui/react";
 import Banner from "@/patterns/Banner";
 import { PageContainer } from "@/patterns/Layouts/PageContainer";
+import {
+  HOTSPOTTEXT,
+  HOTSPOTCARD1,
+  HOTSPOTCARD2,
+  HOTSPOTCARD3,
+  HOTSPOTCARD4,
+} from "@/components/Constant/ShareData";
+import {
+  Box,
+  Center,
+  SimpleGrid,
+  Text,
+  Stack,
+  Image,
+  Heading,
+  Card,
+  CardBody,
+} from "@chakra-ui/react";
+import Banner from "@/patterns/Banner";
+import VideoPlayer from "@/patterns/VideoPlayer";
 
 const breadcrumb = [
   { text: "Home", link: "/" },
@@ -56,6 +76,34 @@ const HotSpot = () => {
         <Box p={[5, 20]}>
           <SimpleGrid columns={[1, 2]} spacing={3}>
             <>
+              <Box key={index}>
+                <VideoPlayer
+                  p={10}
+                  h="100%"
+                  videodata={{
+                    thumbnail: item.img,
+                    videosrc: "https://videostori.io/v/l4/IVyEio",
+                  }}
+                />
+              </Box>
+              <Box key={index} px={10} alignItems="center">
+                <Heading pb={15} color={"gray.700"} size={["md", "2xl"]}>
+                  {item.heading}
+                </Heading>
+                <Text py={10} color={"grey.300"} fontSize="md">
+                  {item.paragraph1}
+                </Text>
+                <Text color={"grey.300"} fontSize="md">
+                  {item.paragraph2}
+                </Text>
+              </Box>
+            </>
+          </SimpleGrid>
+        </Box>
+
+        <Box p={[5, 20]}>
+          <SimpleGrid columns={[1, 2]} spacing={3}>
+            <>
               <Stack px={5}>
                 {HOTSPOTCARD1.map((item, index) => (
                   <Card
@@ -64,9 +112,11 @@ const HotSpot = () => {
                     boxShadow={"2xl"}
                   >
                     <Image
-                      src="/assets/img3.png"
-                      maxW={{ base: "100%", sm: "200px" }}
-                    />
+                      src={item.img}
+                      w={"115px"}
+                      p="5"
+                      bgColor="red.300"
+                    ></Image>
                     <Stack>
                       <CardBody>
                         <Heading size="md" color={"gray.700"}>
@@ -99,9 +149,11 @@ const HotSpot = () => {
                     boxShadow={"2xl"}
                   >
                     <Image
-                      src="/assets/img3.png"
-                      maxW={{ base: "100%", sm: "200px" }}
-                    />
+                      src={item.img}
+                      w={"115px"}
+                      p="5"
+                      bgColor="red.300"
+                    ></Image>
                     <Stack>
                       <CardBody>
                         <Heading size="md" color={"gray.700"}>
@@ -128,9 +180,11 @@ const HotSpot = () => {
                     boxShadow={"2xl"}
                   >
                     <Image
-                      src="/assets/img3.png"
-                      maxW={{ base: "100%", sm: "200px" }}
-                    />
+                      src={item.img}
+                      w={"115px"}
+                      p="5"
+                      bgColor="red.300"
+                    ></Image>
                     <Stack>
                       <CardBody>
                         <Heading size="md" color={"gray.700"}>
@@ -163,9 +217,11 @@ const HotSpot = () => {
                     boxShadow={"2xl"}
                   >
                     <Image
-                      src="/assets/img3.png"
-                      maxW={{ base: "100%", sm: "200px" }}
-                    />
+                      src={item.img}
+                      w={"115px"}
+                      p="5"
+                      bgColor="red.300"
+                    ></Image>
                     <Stack>
                       <CardBody>
                         <Heading size="md" color={"gray.700"}>

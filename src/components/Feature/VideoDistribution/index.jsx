@@ -3,47 +3,52 @@ import Banner from "@/patterns/Banner";
 import { VIDEODB } from "@/components/Constant/ShareData";
 import {
   Box,
-  Center,
+  Icon,
   SimpleGrid,
   Text,
   Flex,
   Image,
   Heading,
-  Card,
-  CardBody,
 } from "@chakra-ui/react";
-import { BiShapeSquare } from "react-icons/bi";
+import {
+  BsFacebook,
+  BsWhatsapp,
+  BsTwitter,
+  BsFillFileEarmarkSpreadsheetFill,
+} from "react-icons/bs";
+import { MdEmail } from "react-icons/md";
+import { FaSms } from "react-icons/fa";
 import { PageContainer } from "@/patterns/Layouts/PageContainer";
 
 const ICONS = [
   {
     id: "1",
-    icon: <BiShapeSquare />,
+    icon: <MdEmail />,
     text: "Email",
   },
   {
     id: "2",
-    icon: <BiShapeSquare />,
+    icon: <FaSms />,
     text: "SMS",
   },
   {
     id: "3",
-    icon: <BiShapeSquare />,
+    icon: <BsWhatsapp />,
     text: "WhatsApp",
   },
   {
     id: "4",
-    icon: <BiShapeSquare />,
+    icon: <BsFacebook />,
     text: "Facebook",
   },
   {
     id: "5",
-    icon: <BiShapeSquare />,
+    icon: <BsTwitter />,
     text: "Twitter",
   },
   {
     id: "6",
-    icon: <BiShapeSquare />,
+    icon: <BsFillFileEarmarkSpreadsheetFill />,
     text: "Programmatic Ads",
   },
 ];
@@ -105,10 +110,10 @@ const index = () => {
                   boxShadow="rgba(100, 100, 111, 0.2) 0px 7px 29px 0px"
                   _hover={{ bg: "black", color: "white", cursor: "pointer" }}
                 >
-                  <Box h="30px" color="red.500">
+                  <Icon ms="30" boxSize={20} color="red.500">
                     {item.icon}
-                  </Box>
-                  <Text fontSize={"lg"} fontWeight={"bold"}>
+                  </Icon>
+                  <Text fontSize={"lg"} p={1} fontWeight={"bold"}>
                     {item.text}
                   </Text>
                 </Box>
