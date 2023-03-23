@@ -4,11 +4,16 @@ import React from "react";
 import { BiShapeSquare } from "react-icons/bi";
 import ImageTextTable from "../ImageTextTable";
 import { interactText } from "@/constants/layoutConstants";
+import { PageContainer } from "@/patterns/Layouts/PageContainer";
 
 const InteractiveVideo = () => {
   const breadcrumb = [
     { text: "Home", link: "/" },
-    { text: "Interactive Video", link: "/interactive-video" },
+    {
+      text: "Interactive Video",
+      link: "/interactive-video",
+      isCurrentPage: true,
+    },
   ];
   const itemData = [
     {
@@ -105,9 +110,9 @@ const InteractiveVideo = () => {
   return (
     <Box>
       <Banner title="Interactive Video" breadcrumb={breadcrumb} />
-      <ImageTextTable imageTextdata={interactText} />
-      <Box>
-        <Heading textAlign={"center"}>
+      <PageContainer>
+        <ImageTextTable imageTextdata={interactText} />
+        <Heading variant="headLine" textAlign={"center"}>
           Interactive video with interactive Elements
         </Heading>
         <Flex
@@ -136,7 +141,7 @@ const InteractiveVideo = () => {
             );
           })}
         </Flex>
-      </Box>
+      </PageContainer>
     </Box>
   );
 };
