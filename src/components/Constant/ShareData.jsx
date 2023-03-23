@@ -89,37 +89,32 @@ export const SWITCHTIMELINE_CARDS1 = [
     {
         id: "Card1",
         number: "01",
-        heading: "Lead Generation",
-        paragraph:
-          "Generate Leads directly through the Video. No more need for the customer to remember the Call to Action preventing fall-offs.",
+        heading: "Alternate storylines",
+        paragraph: "Interactive videos can have multiple storylines or plot points that the viewer can choose to follow. Switching between timelines can help the viewer navigate between these different storylines, and see how their choices affect the outcome",
       },
       {
         id: "Card2",
         number: "02",
-        heading: "Shoppable Video",
-        paragraph:
-          "Type of interactive video that allows viewers to make purchases directly from the video itself",
+        heading: "Multiple perspectives",
+        paragraph: "video can present multiple perspectives on a particular event or situation, and switching between timelines can help the viewer see how these different perspectives fit together",
       },
       {
         id: "Card3",
         number: "03",
-        heading: "Personalization",
-        paragraph:
-          "Create interactive video content to meet the specific needs and preferences of individual viewers.",
+        heading: "Before-and-after comparisons",
+        paragraph: "Switching between timelines can be useful for showing the difference between a situation before and after a particular event or decision",
       },
       {
         id: "Card4",
         number: "04",
-        heading: "Gamification",
-        paragraph:
-          "Gamification refers to the integration of game elements and mechanics on the video to increase engagement and interaction",
+        heading: "Historical events",
+        paragraph: "Timeline switching can be used to show historical events, with different timelines representing different eras or time periods",
       },
       {
         id: "Card5",
         number: "05",
-        heading: "App Acquisition",
-        paragraph:
-          "acquiring new users to mobile app through various marketing activities.",
+        heading: "Training and education",
+        paragraph: "Interactive videos can be used for training and education, with different timelines representing different learning objectives",
       },
 ]
 
