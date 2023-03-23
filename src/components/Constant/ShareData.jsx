@@ -47,7 +47,7 @@ export const HOTSPOTCARD2 = [
   
 export const HOTSPOTCARD3 = [
       {
-        img: '/assets/call.jpg',
+        img: '/assets/call.png',
         heading: "Start Call",
         paragraph: "Enables the viewer to make a call by clicking on this hotspot Open an Image: Enables",
       },

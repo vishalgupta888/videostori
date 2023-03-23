@@ -50,9 +50,8 @@ const HotSpot = () => {
                   direction={{ base: "column", sm: "row" }}
                   overflow="hidden"
                   boxShadow={"2xl"}
-                  p={2}
                 >
-                  <Image src={item.img} w={100} h={100} my="auto"></Image>
+                  <Image src={item.img} w={'115px'} p="5" bgColor="red.300"></Image>
                   <Stack>
                     <CardBody>
                       <Heading size="md" color={'gray.700'}>{item.heading}</Heading>
@@ -81,9 +80,8 @@ const HotSpot = () => {
                   direction={{ base: "column", sm: "row" }}
                   overflow="hidden"
                   boxShadow={"2xl"}
-                  p={2}
                 >
-                  <Image src={item.img} w={100} h={100} my="auto"></Image>
+                  <Image src={item.img} w={'115px'} p="5" bgColor="red.300"></Image>
                   <Stack>
                     <CardBody>
                       <Heading size="md" color={'gray.700'}>{item.heading}</Heading>
@@ -106,9 +104,8 @@ const HotSpot = () => {
                   direction={{ base: "column", sm: "row" }}
                   overflow="hidden"
                   boxShadow={"2xl"}
-                  p={2}
                 >
-                  <Image src={item.img} w={100} h={100} my="auto"></Image>
+                  <Image src={item.img} w={'115px'} p="5" bgColor="red.300"></Image>
                   <Stack>
                     <CardBody>
                       <Heading size="md" color={'gray.700'}>{item.heading}</Heading>
@@ -137,9 +134,8 @@ const HotSpot = () => {
                   direction={{ base: "column", sm: "row" }}
                   overflow="hidden"
                   boxShadow={"2xl"}
-                  p={2}
                 >
-                  <Image src={item.img} w={100} h={100} my="auto"></Image>
+                  <Image src={item.img} w={'115px'} p="5" bgColor="red.300"></Image>
                   <Stack>
                     <CardBody>
                       <Heading size="md" color={'gray.700'}>{item.heading}</Heading>
