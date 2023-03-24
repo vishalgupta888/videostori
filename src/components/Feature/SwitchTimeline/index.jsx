@@ -45,7 +45,7 @@ const SwitchTimeline = () => {
             <Center>
               <Heading
                 color="#1b1f2e"
-                mb={[10, 20]}
+                mb={5}
                 fontSize={{ base: "3xl", md: "5xl" }}
               >
                 Switch Timeline Uses​
@@ -54,18 +54,6 @@ const SwitchTimeline = () => {
           </Box>
 
           <Box h="auto" bg="#fff" px={10} py={10}>
-            <Box py={15}>
-              <Center>
-                <Heading
-                  color="#1b1f2e"
-                  mb={[10, 20]}
-                  fontSize={{ base: "3xl", md: "5xl" }}
-                >
-                  Switch Timeline Uses​
-                </Heading>
-              </Center>
-            </Box>
-
             <SimpleGrid
               columns={[1, 5]}
               spacing={0}
@@ -124,26 +112,6 @@ const SwitchTimeline = () => {
               })}
             </SimpleGrid>
           </Box>
-
-          <Center py={10} px="10">
-            <Text fontSize="30px" color="red.400">
-              {" "}
-              Timeline Switch can be used following cases
-            </Text>
-          </Center>
-
-          <SimpleGrid columns={[1, 4]} spacing={10} px={10} py={10}>
-            {SWITCHTIMELINE_CARDS2.map((item, index) => {
-              return (
-                <Box key={index} boxShadow={"2xl"} p={5} bg={"gray.100"}>
-                  <Heading py={5} size={"md"} color="gray.900">
-                    {item.heading}
-                  </Heading>
-                  <Text size={"sm"}>{item.paragraph}</Text>
-                </Box>
-              );
-            })}
-          </SimpleGrid>
         </Box>
 
         <Center py={6} px={10}>

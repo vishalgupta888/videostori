@@ -67,7 +67,7 @@ const index = () => {
             {REPORTANALYTICS.map((item, index) => (
               <>
                 <Box key={index}>
-                  <Image src={item.img} />
+                  <Image src={item.imageurl} />
                 </Box>
                 <Box key={index} px={10} alignItems="center">
                   <Text
@@ -79,10 +79,10 @@ const index = () => {
                     Insights
                   </Text>
                   <Heading pb={15} color={"gray.700"} size={["md", "2xl"]}>
-                    {item.heading}
+                    {item.title}
                   </Heading>
                   <Text py={10} color={"grey.300"} fontSize="md">
-                    {item.paragraph}
+                    {item.description}
                   </Text>
                 </Box>
               </>
