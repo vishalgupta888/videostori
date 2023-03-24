@@ -14,7 +14,11 @@ const Banner = ({ title, breadcrumb }) => {
         <Breadcrumb mt="1em" textAlign={"center"}>
           {breadcrumb.map((item, index) => {
             return (
-              <BreadcrumbItem color="baseText" key={index + item.link}>
+              <BreadcrumbItem
+                color="text.base"
+                isCurrentPage={item.isCurrentPage}
+                key={index + item.link}
+              >
                 <BreadcrumbLink href={item.link}>{item.text}</BreadcrumbLink>
               </BreadcrumbItem>
             );

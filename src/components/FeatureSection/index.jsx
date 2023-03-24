@@ -4,9 +4,12 @@ import {
   Box,
   Flex,
   Text,
-  Heading,
+  Icon,
   SimpleGrid,
 } from '@chakra-ui/react';
+import { BiMobileAlt } from 'react-icons/bi';
+import { FaRegObjectGroup,FaChartBar } from 'react-icons/fa';
+import { MdOutlineGroups3,MdOutlineScreenSearchDesktop } from 'react-icons/md';
 
 export default function FeatureSection() {
   return (
@@ -29,31 +32,39 @@ export default function FeatureSection() {
           h={'full'}
         />
       </Flex>
-      <Container maxW={'7xl'} zIndex={10} position={'relative'}>
+      <Container maxW={'7xl'} py={10} zIndex={10} position={'relative'}>
         <Stack direction={{ base: 'column', lg: 'row' }}>
           <Stack
             color={'gray.400'}
             justify={{ lg: 'center' }}
-            py={{ base: 10, md: 20}}>
-            <Box mb={{ base: 8, md: 20 }}>
-              <Text fontSize={'2rem'} color={'white'} fontWeight='bold'>
-              Why You Should Create Interactive Videos ?
-              </Text>
-            </Box>
-
-            <SimpleGrid columns={{ base: 1, md: 2 }} spacing={10}>
+            py={{ base: 10, md: 20 }}>
+            <SimpleGrid columns={{ base: 1, md: 3 }} spacing={10}>
+              <Box>
+                <Text fontSize={'3xl'} color={'white'} fontWeight='bold'>
+                  Why You Should Create Interactive Videos ?
+                </Text>
+              </Box>
               {stats.map((stat) => (
-                <Box key={stat.title}>
+                <Box display={'flex'} key={stat.title}>
+                  <Icon
+                    cursor={"pointer"}
+                    as={stat.icon}
+                    boxSize={55}
+                    fill="white"
+                  />
+                  <Flex direction={'column'} mx={5}>
                   <Text
                     fontFamily={'heading'}
-                    fontSize={'3xl'}
+                    fontSize={'xl'}
                     color={'white'}
+                    fontWeight="bold"
                     mb={3}>
                     {stat.title}
                   </Text>
-                  <Text fontSize={'xl'} color={'gray.400'}>
+                  <Text fontSize={'sm'} color={'gray.400'}>
                     {stat.content}
                   </Text>
+                  </Flex>
                 </Box>
               ))}
             </SimpleGrid>
@@ -72,38 +83,49 @@ const StatsText = ({ children }) => (
 
 const stats = [
   {
-    title: '10+',
+    title: 'Boosts engagement',
+    icon: FaRegObjectGroup,
     content: (
       <>
-        <StatsText>Software modules</StatsText> for detailed monitoring and
-        real-time analytics
+
+        Boosts engagement
+        Interactive video provides viewers with a unique and engaging experience that encourages active participation, leading to higher engagement rates and better retention
       </>
     ),
   },
   {
-    title: '24/7',
+    title: 'Drives conversions',
+    icon: FaChartBar,
     content: (
       <>
-        <StatsText>Analytics</StatsText> enabled right in your dashboard without
-        history limitations
+        By integrating calls-to-action and other interactive elements, interactive video can help to drive more conversions and improve the ROI of your marketing efforts
       </>
     ),
   },
   {
-    title: '13%',
+    title: 'Provides valuable data',
+    icon: BiMobileAlt,
     content: (
       <>
-        <StatsText>Farms</StatsText> in North America has chosen NewLife™ as
-        their management solution
+        Interactive video can provide valuable data on viewer behavior and engagement, allowing marketers to optimize their strategies and drive better results
       </>
     ),
   },
   {
-    title: '250M+',
+    title: 'Improves brand awareness',
+    icon: MdOutlineGroups3,
     content: (
       <>
-        <StatsText>Plants</StatsText> currently connected and monitored by the
-        NewLife™ software
+        Interactive video provides a unique opportunity to showcase your brand and tell your story in a more engaging and memorable way
+      </>
+    ),
+  },
+  {
+    title: 'Enhances user experience',
+    icon: MdOutlineScreenSearchDesktop,
+    content: (
+      <>
+        Interactive video can enhance the user experience by providing a more personalized and immersive experience that allows viewers to control their own journey
       </>
     ),
   },

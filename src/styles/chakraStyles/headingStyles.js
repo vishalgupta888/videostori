@@ -1,10 +1,18 @@
 export const headingStyle = {
-  Heading: {
+    Heading: {
+       variants: {
+            headLine: {
+                fontSize: ['20px','20px','24px', '24px'],
+                color: 'text.headline',
+          }
+      },
     baseStyle: {
       fontSize: ['32px', '36px', '42px', '52px'],
-      fontWeight: 'bold',
-      color: 'white',
-    }
+        fontWeight:600,
+
+      color: 'text.base',
+        },
+
   }
 
 };

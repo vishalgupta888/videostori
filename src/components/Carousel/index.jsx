@@ -4,14 +4,15 @@ import {
   Flex,
   Heading,
   IconButton,
-  Image,
-  Spacer,
+  Icon,
   Text,
   useBreakpointValue,
 } from "@chakra-ui/react";
 import { BiLeftArrowAlt, BiRightArrowAlt } from "react-icons/bi";
+import { BsCheckCircle } from "react-icons/bs";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
+import VideoPlayer from "@/patterns/VideoPlayer";
 import "slick-carousel/slick/slick-theme.css";
 
 const settings = {
@@ -28,46 +29,51 @@ const settings = {
 
 export default function Carousel() {
   const [slider, setSlider] = useState(null);
-  const top = useBreakpointValue({ base: "90%", md: "50%" });
+  const top = useBreakpointValue({ base: "90%", md: "60%" });
   const side = useBreakpointValue({ base: "30%", md: "5px" });
 
   const cards = [
     {
       img: "assets/img1.png",
       label: "Quit boring survey and make them interactive like never before",
-      desc: "Interact with our switch timeline videos according to the interest and intent. Switch timeline is great feature where there is large amount of content and viewer has the power to define the path of the story",
+      desc: "Create a Survey now on Video. Collect feedback on Videos. The plain and boring surveys can now be made interesting with a story and capturing user responses on Video. Capture user insights while surveying or collecting feedback/response.",
+      subdesc: "Bringing new video Surveys formats",
     },
     {
       img: "assets/img2.png",
       label: "Now brand can use Videos to Personalize the Shopping Experience",
-      desc: "Interact with our switch timeline videos according to the interest and intent. Switch timeline is great feature where there is large amount of content and viewer has the power to define the path of the story",
+      desc: "A video is a visually appealing format for shoppers. Videostori enables conversion of  linear videos to shoppable videos thus reducing the friction and streamlining the shopping experience. This enables the viewer to shop directly from the Video.",
+      subdesc: "Bringing new video Surveys formats",
     },
     {
       img: "assets/img3.png",
       label: "Use Interactive Videos and start making leads",
-      desc: "Interact with our switch timeline videos according to the interest and intent. Switch timeline is great feature where there is large amount of content and viewer has the power to define the path of the story",
+      desc: "Interactive Videos are a great source to generate leads. Interactive Videos can be designed to guide viewers, with each interactive element helping to move the viewer to take a specific action. The viewer can share his response on the CTA included within the Video preventing fall-offs.",
+      subdesc: "Bringing new video Surveys formats",
     },
     {
       img: "assets/img4.png",
       label: "Use Hotspots in your Videos and create the magic",
-      desc: "Interact with our switch timeline videos according to the interest and intent. Switch timeline is great feature where there is large amount of content and viewer has the power to define the path of the story",
+      desc: "Hotspots can make any part of the Video clickable thus enabling a variety of Interactive actions. By providing Interactive Experiences, Hotspots help increase Engagement and Retention, and provide a more Dynamic User Experience.",
+      subdesc: "Bringing new video Surveys formats",
     },
     {
       img: "assets/img5.png",
       label: "Rewind and Fast-Forward",
       desc: "Interact with our switch timeline videos according to the interest and intent. Switch timeline is great feature where there is large amount of content and viewer has the power to define the path of the story",
+      subdesc: "Bringing new video Surveys formats",
     },
   ];
 
   return (
     <Box
       position={"relative"}
-      height={["80vh", "100vh"]}
+      minH={"100vh"}
       width={["100%", "85%"]}
       m="0 auto"
       overflow={"hidden"}
     >
-      <Heading textAlign={"center"} py={9}>
+      <Heading textAlign={"center"} py={10} color="1b1f2e">
         Videostori Sample Video
       </Heading>
       <IconButton
@@ -98,25 +104,41 @@ export default function Carousel() {
       </IconButton>
       <Slider {...settings} ref={(slider) => setSlider(slider)}>
         {cards.map((item, index) => (
-          <Box key={index} w="100%">
-            <Flex w="100%" direction={["column-reverse", "row"]}>
-              <Text
-                pos={"relative"}
-                width={["100%", "50%"]}
-                p={10}
-                fontSize={["1rem", "1.4rem"]}
-                fontWeight="bold"
+          <Box key={index} w="100%" py={20}>
+            <Flex
+              w="100%"
+              h="400px"
+              direction={["column-reverse", "row"]}
+              justifyContent="space-evenly"
+            >
+              <Flex
+                direction={"column"}
+                p={5}
+                width={["100%", "40%"]}
+                alignSelf="center"
               >
-                {item.label}
-              </Text>
-              <Image
-                src={item.img}
+                <Text pos={"relative"} fontSize={["2xl"]} fontWeight="bold">
+                  {item.label}
+                </Text>
+                <Text pos={"relative"} py={8} lineHeight={7} fontSize={["sm"]}>
+                  {item.desc}
+                </Text>
+                <Flex>
+                  <Icon as={BsCheckCircle} boxSize={5} fill="red" />
+                  <Text pos={"relative"} fontSize={["sm"]} px={4}>
+                    {item.subdesc}
+                  </Text>
+                </Flex>
+              </Flex>
+              <VideoPlayer
                 p={10}
-                width={["100%", "50%"]}
-                position="relative"
-                backgroundSize={"cover"}
-                backgroundPosition="center"
-                backgroundRepeat="no-repeat"
+                width={["90%", "45%"]}
+                height={["70%", "100%"]}
+                alignSelf={["center", "normal"]}
+                videodata={{
+                  thumbnail: item.img,
+                  videosrc: "https://videostori.io/v/l4/IVyEio",
+                }}
               />
             </Flex>
           </Box>

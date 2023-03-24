@@ -1,4 +1,7 @@
 import { headingStyle } from "./headingStyles";
+import { breadcrumbStyle } from "./breadcrumbStyles";
+import { pageContainer } from "./pageContainer";
+import { textStyle } from "./textStyles";
 
 const breakpoints = {
     sm: "48em",
@@ -8,10 +11,14 @@ const breakpoints = {
 };
 const overrideTheme = {
     components: {
-...headingStyle
+...headingStyle,...breadcrumbStyle, ...pageContainer,...textStyle
     },
     colors: {
-        baseText: "#FFFFFF",
+        text: {
+            base: "#FFFFFF",
+            body:"#838694",
+        headline: "#1b1f2e"}
+        ,
         light_bg: {
          blue:"#122A75"
 }
@@ -19,8 +26,7 @@ const overrideTheme = {
     breakpoints,
     fonts: {
         body: "Poppins, sans-serif",
-        heading: "Poppins, sans-serif",
-    },
+        heading: "Poppins, sans-serif"    },
     layerStyles: {
     },
     textStyles: {
@@ -29,7 +35,8 @@ const overrideTheme = {
         },
 
         a: {
-            color:"white"
+            color: "white"
+
         }
     },
     icons: {
