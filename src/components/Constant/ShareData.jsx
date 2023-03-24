@@ -1,3 +1,5 @@
+import { FaHandPointUp, FaExternalLinkAlt, FaCommentAlt, FaVideo, FaRegComments, FaMailBulk, FaPhoneAlt, FaImage, FaRoute, FaCcApplePay, FaGamepad } from "react-icons/fa";
+
 export const HOTSPOTTEXT = [
     {
       img: '/assets/img2.png',
@@ -11,17 +13,17 @@ export const HOTSPOTTEXT = [
 
 export const HOTSPOTCARD1 = [
     {
-      img: '/assets/click.png',
+      icon: <FaHandPointUp />,
       heading: "Enable Click",
       paragraph: "Businesses can enable any portion of the screen or any product clickable by enabling an hotspot. This can help create a shoppable video, enables personalized and dynamic viewer experience, or gamify the video",
     },
     {
-      img: '/assets/openlink.png',
+      icon: <FaExternalLinkAlt />,
       heading: "Open Link",
       paragraph: "This helps redirecting the user to the businesses website, enables downloading of a pdf, links to product or service detail pages for advanced user information",
     },
     {
-      img: '/assets/feedback.png',
+      icon: <FaCommentAlt />,
       heading: "Collect Feedback",
       paragraph: "Get the feedback or the opinion of the viewer by using the Collect Feedback button",
     },
@@ -29,17 +31,17 @@ export const HOTSPOTCARD1 = [
   
 export const HOTSPOTCARD2 = [
       {
-        img: '/assets/videoic.png',
+        icon: <FaVideo />,
         heading: "Switch Video",
         paragraph: "Move on to a different video from the current video by using Switch Video  and create a dynamic, personalized and Interactive Viewing Experience",
       },
       {
-        img: '/assets/message.png',
+        icon: <FaRegComments />,
         heading: "Show Message",
         paragraph:"Share important information by displaying the message to the viewer on the click",
       },
       {
-        img: '/assets/email.png',
+        icon: <FaMailBulk />,
         heading: "Start Email",
         paragraph: "Enables the Viewer to mail from their configured email program. By clicking the native email opens up on the device and the viewer can use it to email to the business",
       },
@@ -47,17 +49,17 @@ export const HOTSPOTCARD2 = [
   
 export const HOTSPOTCARD3 = [
       {
-        img: '/assets/call.png',
+        icon: <FaPhoneAlt />,
         heading: "Start Call",
         paragraph: "Enables the viewer to make a call by clicking on this hotspot Open an Image: Enables",
       },
       {
-        img: '/assets/gallary.png',
+        icon: <FaImage />,
         heading: "Open an Image",
         paragraph: "Enables the viewers to learn more by pausing the video and opening an image",
       },
       {
-        img: '/assets/hotspot.png',
+        icon: <FaRoute />,
         heading: "Hotspot Timeline",
         paragraph: "Enables navigation of the video from one timeline to another timeline in the same video session",
       },
@@ -65,25 +67,16 @@ export const HOTSPOTCARD3 = [
   
 export const HOTSPOTCARD4 = [
       {
-        img: '/assets/appdown.png',
+        icon: <FaCcApplePay />,
         heading: "Download App",
         paragraph: "Quickly enables download of an app by clicking on the relevant Hotspot",
       },
       {
-        img: '/assets/game.png',
+        icon: <FaGamepad />,
         heading: "Gamify the Video",
         paragraph: "Track Viewer behavior and his clicks and gamify the Video",
       },
     ];
-    
-export const SWITCHTIMELINE = [
-    {
-        img: '/assets/img2.png',
-        heading: 'Enable Dynamic Personalized Viewing in Video',
-        paragraph1: 'Videostori Switch Timeline Switch enables navigation capability on business Videos. Viewers can dynamically move to a different portion of the video by a designated click. This provides a custom tailored experience that keeps the audience engaged.',
-        paragraph2: 'for your free trial'
-    }
-];
 
 export const SWITCHTIMELINE_CARDS1 = [
     {
@@ -135,33 +128,6 @@ export const SWITCHTIMELINE_CARDS2 = [
         heading: "Shorter Viewing",
         paragraph: "By enabling a CTA with Timeline Switch feature a user can directly reach out to the CTA even before the completion of the Video"
     }
-]
-
-export const VIDEODB = [
-  {
-    img: "http://web.msdi.in/wp-content/uploads/2023/02/Generating-new-leads.gif",
-    heading: 'Share an Interactive video',
-    paragraph: 'Video distribution in interactive video involves delivering this type of content to viewers through various platforms and channels',
-    paragraph2: 'Video distribution involves delivering Interactive video content to viewers through various platforms and channels. Videostori enables the Interactive Video distribution with a click of a few buttons. You can share the Videos on most of the distribution channels. The advantage of the single platform for content creation and distribution is that it gives you unique insights in the client behavior which help clients tweak their campaigns to get maximum engagements and conversions.'
-  }
-]
-
-export const REPORTSAN = [
-  {
-    img: "http://web.msdi.in/wp-content/uploads/2023/02/videostori-3-1024x614.jpg",
-    heading: 'Get Insights on Consumer Behavior and Optimize Your Content',
-    paragraph: 'Videostori analytics provides insights on how viewers are engaging with video content. Video analytics gives the client an insight on Viewer Behavior, how they are interacting with the content, where they fall off. By analyzing video insights, businesses and content creators can gain a better understanding of how users are interacting with their video content, which can help them optimize their content strategy to improve engagement and achieve their marketing goals.Video insights can include data such as views, watch time, engagement, and conversion rates.',
-   
-  }
-]
-
-export const REPORTANALYTICS = [
-  {
-    img: "http://web.msdi.in/wp-content/uploads/2023/02/istockphoto-1256196981-612x612-1.jpg",
-    heading: 'Video Views Reports',
-    paragraph: 'With Videostori View reports, you can filter on specific video or group of videos on a specific date range and get open rates, percentage of video watched, Click through rates, time of the day, OS used etc. You can analyze these view reports and find trends as well as gaps in your viewer engagement.',
-   
-  }
 ]
 
 export const REPORTCARDS = [

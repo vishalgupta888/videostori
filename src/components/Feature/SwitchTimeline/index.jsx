@@ -1,23 +1,10 @@
 import React from "react";
-import {
-  SWITCHTIMELINE,
-  SWITCHTIMELINE_CARDS1,
-  SWITCHTIMELINE_CARDS2,
-} from "@/components/constant/ShareData";
-import {
-  Box,
-  Center,
-  SimpleGrid,
-  Text,
-  Stack,
-  Heading,
-  Link,
-  Circle,
-  VStack,
-} from "@chakra-ui/react";
+import { SWITCHTIMELINE_CARDS1, SWITCHTIMELINE_CARDS2} from "@/components/constant/ShareData";
+import { Box, Center, SimpleGrid, Text, Stack, Heading, Link, Circle, VStack} from "@chakra-ui/react";
 import { TriangleUpIcon } from "@chakra-ui/icons";
 import Banner from "@/patterns/Banner";
-import VideoPlayer from "@/patterns/VideoPlayer";
+import ImageTextTable from "@/components/ImageTextTable";
+import { SWITCHTIMELINE } from "@/constants/layoutConstants";
 
 const breadcrumb = [
   { text: "Home", link: "/" },
@@ -28,43 +15,16 @@ const SwitchTimeline = () => {
   return (
     <>
       <Banner title="Switch Timeline" breadcrumb={breadcrumb} />
+        {SWITCHTIMELINE.map((SWITCHTIMELINE, index) => {
+          return  <ImageTextTable
+            isVideo={true} 
+            index={index} 
+            imageTextdata={SWITCHTIMELINE} 
+          />;
+        })}
 
-      <Box p={[5, 20]}>
-        <SimpleGrid columns={[1, 2]} spacing={3}>
-          {SWITCHTIMELINE.map((item, index) => (
-            <>
-              <Box>
-                <VideoPlayer
-                  p={10}
-                  width={["100%"]}
-                  h={["full"]}
-                  videodata={{
-                    thumbnail: item.img,
-                    videosrc: "https://videostori.io/v/l4/IVyEio",
-                  }}
-                />
-              </Box>
-              <Box key={index} px={10} alignItems="center">
-                <Heading pb={15} color={"gray.700"} size={["md", "lg"]}>
-                  {item.heading}
-                </Heading>
-                <Text py={10} color={"grey.300"} fontSize="lg">
-                  {item.paragraph1}
-                </Text>
-                <Text color={"grey.300"} fontSize="md">
-                  <Link color="red" fontWeight={"700"}>
-                    Click here to login
-                  </Link>{" "}
-                  {item.paragraph2}
-                </Text>
-              </Box>
-            </>
-          ))}
-        </SimpleGrid>
-      </Box>
-
-      <Box h="auto" bg="#fff" px={10} py={10}>
-        <Box py={15}>
+      <Box h="auto" bg="#fff" px={10}>
+        <Box py={10}>
           <Center>
             <Heading
               color="#1b1f2e"
@@ -134,8 +94,8 @@ const SwitchTimeline = () => {
           })}
         </SimpleGrid>
       </Box>
-      
-      <Center py={10} px="10">
+
+      <Center py={6} px={10}>
         <Text fontSize="30px" color="red.400">
           {" "}
           Timeline Switch can be used following cases
@@ -145,7 +105,7 @@ const SwitchTimeline = () => {
       <SimpleGrid columns={[1, 4]} spacing={10} px={10} py={10}>
         {SWITCHTIMELINE_CARDS2.map((item, index) => {
           return (
-            <Box key={index} boxShadow={"2xl"} p={5} bg={"gray.100"}>
+            <Box key={index} boxShadow={"2xl"} p={5} bg={"white.400"}>
               <Heading py={5} size={"md"} color="gray.900">
                 {item.heading}
               </Heading>

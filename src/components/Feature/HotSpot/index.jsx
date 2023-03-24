@@ -1,8 +1,9 @@
 import React from "react";
 import {HOTSPOTTEXT, HOTSPOTCARD1, HOTSPOTCARD2, HOTSPOTCARD3, HOTSPOTCARD4} from "@/components/Constant/ShareData";
-import { Box, Center, SimpleGrid, Text, Stack, Image, Heading, Card, CardBody} from "@chakra-ui/react";
+import { Box, Icon, SimpleGrid, Text, Stack, Image, Heading, Card, CardBody, Center} from "@chakra-ui/react";
 import Banner from '@/patterns/Banner';
 import VideoPlayer from "@/patterns/VideoPlayer";
+import {FaHandPointUp} from "react-icons/fa"
 
 const breadcrumb = [
   { text: "Home", link: "/" },
@@ -51,7 +52,7 @@ const HotSpot = () => {
                   overflow="hidden"
                   boxShadow={"2xl"}
                 >
-                  <Image src={item.img} w={'115px'} p="5" bgColor="red.300"></Image>
+                  <Center ms="5" py={2}><Icon w={100} h={100} cursor="pointer" color='red.500'>{item.icon}</Icon></Center>
                   <Stack>
                     <CardBody>
                       <Heading size="md" color={'gray.700'}>{item.heading}</Heading>
@@ -81,7 +82,7 @@ const HotSpot = () => {
                   overflow="hidden"
                   boxShadow={"2xl"}
                 >
-                  <Image src={item.img} w={'115px'} p="5" bgColor="red.300"></Image>
+                  <Center ms="5" py={2}><Icon w={100} h={100} cursor="pointer" color='red.500'>{item.icon}</Icon></Center>
                   <Stack>
                     <CardBody>
                       <Heading size="md" color={'gray.700'}>{item.heading}</Heading>
@@ -105,7 +106,7 @@ const HotSpot = () => {
                   overflow="hidden"
                   boxShadow={"2xl"}
                 >
-                  <Image src={item.img} w={'115px'} p="5" bgColor="red.300"></Image>
+                  <Center ms="5" py={2}><Icon w={100} h={100} cursor="pointer" color='red.500'>{item.icon}</Icon></Center>
                   <Stack>
                     <CardBody>
                       <Heading size="md" color={'gray.700'}>{item.heading}</Heading>
@@ -135,7 +136,7 @@ const HotSpot = () => {
                   overflow="hidden"
                   boxShadow={"2xl"}
                 >
-                  <Image src={item.img} w={'115px'} p="5" bgColor="red.300"></Image>
+                  <Center ms="5" py={2}><Icon w={100} h={100} cursor="pointer" color='red.500'>{item.icon}</Icon></Center>
                   <Stack>
                     <CardBody>
                       <Heading size="md" color={'gray.700'}>{item.heading}</Heading>
