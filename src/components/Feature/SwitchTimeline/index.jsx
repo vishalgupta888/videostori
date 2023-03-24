@@ -2,7 +2,7 @@ import React from "react";
 import {
   SWITCHTIMELINE_CARDS1,
   SWITCHTIMELINE_CARDS2,
-} from "@/components/constant/ShareData";
+} from "@/components/Constant/ShareData";
 import {
   Box,
   Center,
