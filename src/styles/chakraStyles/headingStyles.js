@@ -1,9 +1,9 @@
 export const headingStyle = {
   Heading: {
     baseStyle: {
-      fontSize: ['32px', '36px', '42px', '52px'],
+      fontSize: ['22px', '36px', '42px'],
       fontWeight: 'bold',
-      color: 'white',
+      color: 'black',
     }
   }
 

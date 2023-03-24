@@ -27,7 +27,7 @@ const VideoPlayer = ({ videodata, ...props }) => {
         cursor={"pointer"}
         onClick={() => setPlayVideo(true)}
         as={BsFillPlayCircleFill}
-        boxSize={50}
+        boxSize={62}
         fill="red"
       />
       {playVideo && (

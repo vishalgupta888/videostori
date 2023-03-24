@@ -1,15 +1,21 @@
+import Banner from '@/patterns/Banner';
 import { Box, Flex, Text, Heading, Image } from '@chakra-ui/react'
 import React from 'react'
 import FeatureSection from '../FeatureSection'
+import { leadText } from '@/constants/layoutConstants';
+import ImageTextTable from '../ImageTextTable';
 
 const LeadGeneration = () => {
+    const breadcrumb = [
+        { text: "Home", link: "/" },
+        { text: "Interactive Video", link: "/interactive-video" },
+        { text: "Lead Generations Videos", link: "/interactive-video/lead-generation-videos/" },
+      ];
+
     return (
         <Box>
-            <Box display="flex" alignItems='center' justifyContent='center' h='50vh' bg='#122a75'>
-                <Text color='white' fontSize={['1.8rem', '3rem']} fontWeight='bold'>Lead Generation Videos</Text>
-            </Box>
-
-            <Flex minH='80vh' flexDir={['column', 'row']} justifyContent={'space-around'} alignItems='center' my='70px' mx={['0','70px']} flexWrap={'wrap'} >
+         <Banner title="Lead Generations Videos" breadcrumb={breadcrumb} />
+            {/* <Flex minH='80vh' flexDir={['column', 'row']} justifyContent={'space-around'} alignItems='center' my='70px' mx={['0','70px']} flexWrap={'wrap'} >
                 <Box w={['80vw', '40vw']}>
                     <Heading fontSize={'28px'}>Generate High Quality Leads with Interactive Video
                     </Heading>
@@ -34,7 +40,13 @@ const LeadGeneration = () => {
                         Interactive Videos can engage attention higher than Linear Videos
                         Videostori platform helps you convert linear videos to Interactive Lead Generation Videos. Click here to Try</Text>
                 </Box>
-            </Flex>
+            </Flex> */}
+            {leadText.map((leadData, index)=>{
+                return <ImageTextTable
+                  index={index +  1}
+                  imageTextdata={leadData}
+                />
+            })}
             <FeatureSection/>
         </Box>
     )

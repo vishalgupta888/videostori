@@ -279,7 +279,6 @@ import {
     },
     {
       label: 'Features',
-      href: "/features",
       children: [
         {
           label: 'Hot Spot',
