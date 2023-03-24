@@ -1,3 +1,6 @@
+import ImageSection from "@/patterns/ImageSection";
+import TextSection from "@/patterns/TextSection";
+import { Link } from "@chakra-ui/react";
 
 export const interactText = {
     imageurl: '/assets/interactive.png/',
@@ -57,3 +60,35 @@ export const appText = {
     title: 'App Acquisition through an Interactive Video',
     description: 'Apps provide a platform for the viewers where he can navigate his own journey and use them as he pleases but app acquisition is still done in a boring way through Display Ads mostly. When it is done through the Videos also the performance managers expect the users to search to various app stores and then download their apps which results in a fall-off. Videostori provides a medium wherein performance managers can do their app acquisition campaigns through the Interactive Videos. The businesses have to prepare a video on what their app is and the problem it will solve for the viewer and then at relevant positions a hotspot can be used to help viewers directly download the video after clicking on those hotspots. This will help take away the memory issues and prevent unnecessary fall-offs thus leading to better engagement and conversions.Click here to try the platform '
 }
+
+export const SWITCHTIMELINE = [
+    {
+        thumb: '/assets/img5.png',
+        src: 'https://videostori.io/v/l4/IVx51S',
+        title: 'Enable Dynamic Personalized Viewing in Video',
+        description: 'Videostori Switch Timeline Switch enables navigation capability on business Videos. Viewers can dynamically move to a different portion of the video by a designated click. This provides a custom tailored experience that keeps the audience engaged.',
+   }
+]
+
+export const VIDEODB = {
+    imageurl: 'http://web.msdi.in/wp-content/uploads/2023/02/Generating-new-leads.gif',
+    title: 'Share an Interactive video',
+    description: `Video distribution in interactive video involves delivering this type of content to viewers through various platforms and channels. \n\nVideostori enables the Interactive Video distribution with a click of a few buttons. You can share the Videos on most of the distribution channels. The advantage of the single platform for content creation and distribution is that it gives you unique insights in the client behavior which help clients tweak their campaigns to get maximum engagements and conversions.`
+};
+
+export const REPORTSAN = [
+    {
+      imageurl: "http://web.msdi.in/wp-content/uploads/2023/02/videostori-3-1024x614.jpg",
+      title: 'Get Insights on Consumer Behavior and Optimize Your Content',
+      description: 'Videostori analytics provides insights on how viewers are engaging with video content. Video analytics gives the client an insight on Viewer Behavior, how they are interacting with the content, where they fall off. By analyzing video insights, businesses and content creators can gain a better understanding of how users are interacting with their video content, which can help them optimize their content strategy to improve engagement and achieve their marketing goals.Video insights can include data such as views, watch time, engagement, and conversion rates.',
+    }
+  ]
+
+
+export const REPORTANALYTICS = [
+    {
+      imageurl: "http://web.msdi.in/wp-content/uploads/2023/02/istockphoto-1256196981-612x612-1.jpg",
+      title: 'Video Views Reports',
+      description: 'With Videostori View reports, you can filter on specific video or group of videos on a specific date range and get open rates, percentage of video watched, Click through rates, time of the day, OS used etc. You can analyze these view reports and find trends as well as gaps in your viewer engagement.',
+    }
+  ]

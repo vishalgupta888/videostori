@@ -1,6 +1,6 @@
 import React from "react";
 import Banner from "@/patterns/Banner";
-import { VIDEODB } from "@/components/Constant/ShareData";
+import { VIDEODB } from "@/constants/layoutConstants";
 import {
   Box,
   Icon,
@@ -10,20 +10,21 @@ import {
   Image,
   Heading,
 } from "@chakra-ui/react";
+import ImageTextTable from "@/components/ImageTextTable";
 import {
-  BsFacebook,
-  BsWhatsapp,
-  BsTwitter,
-  BsFillFileEarmarkSpreadsheetFill,
-} from "react-icons/bs";
-import { MdEmail } from "react-icons/md";
-import { FaSms } from "react-icons/fa";
+  FaMailBulk,
+  FaSms,
+  FaWhatsapp,
+  FaFacebook,
+  FaTwitter,
+  FaRegCreditCard,
+} from "react-icons/fa";
 import { PageContainer } from "@/patterns/Layouts/PageContainer";
 
 const ICONS = [
   {
     id: "1",
-    icon: <MdEmail />,
+    icon: <FaMailBulk />,
     text: "Email",
   },
   {
@@ -33,22 +34,22 @@ const ICONS = [
   },
   {
     id: "3",
-    icon: <BsWhatsapp />,
+    icon: <FaWhatsapp />,
     text: "WhatsApp",
   },
   {
     id: "4",
-    icon: <BsFacebook />,
+    icon: <FaFacebook />,
     text: "Facebook",
   },
   {
     id: "5",
-    icon: <BsTwitter />,
+    icon: <FaTwitter />,
     text: "Twitter",
   },
   {
     id: "6",
-    icon: <BsFillFileEarmarkSpreadsheetFill />,
+    icon: <FaRegCreditCard />,
     text: "Programmatic Ads",
   },
 ];
@@ -63,27 +64,8 @@ const index = () => {
     <>
       <Banner title="Video Distribution" breadcrumb={breadcrumb} />
       <PageContainer>
-        <Box py={[5, 20]}>
-          <SimpleGrid columns={[1, 2]} spacing={3}>
-            {VIDEODB.map((item, index) => (
-              <>
-                <Box key={index} px={10} alignItems="center">
-                  <Heading pb={15} color={"gray.700"} size={["md", "2xl"]}>
-                    {item.heading}
-                  </Heading>
-                  <Text py={10} color={"grey.300"} fontSize="md">
-                    {item.paragraph}
-                  </Text>
-                  <Text color={"grey.300"} fontSize="md">
-                    {item.paragraph2}
-                  </Text>
-                </Box>
-                <Box key={index}>
-                  <Image src={item.img} />
-                </Box>
-              </>
-            ))}
-          </SimpleGrid>
+        <Box>
+          <ImageTextTable imageTextdata={VIDEODB} />
         </Box>
 
         <Box>
@@ -108,7 +90,7 @@ const index = () => {
                   w="190px"
                   m="20px"
                   boxShadow="rgba(100, 100, 111, 0.2) 0px 7px 29px 0px"
-                  _hover={{ bg: "black", color: "white", cursor: "pointer" }}
+                  _hover={{ bg: "black", color: "#fff", cursor: "pointer" }}
                 >
                   <Icon ms="30" boxSize={20} color="red.500">
                     {item.icon}

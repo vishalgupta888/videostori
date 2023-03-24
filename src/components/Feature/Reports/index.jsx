@@ -1,10 +1,9 @@
 import React from "react";
 import Banner from "@/patterns/Banner";
-import {
-  REPORTSAN,
-  REPORTCARDS,
-  REPORTANALYTICS,
-} from "@/components/Constant/ShareData";
+import { REPORTCARDS } from "@/components/Constant/ShareData";
+import { REPORTSAN, REPORTANALYTICS } from "@/constants/layoutConstants";
+import ImageTextTable from "@/components/ImageTextTable";
+import { PageContainer } from "@/patterns/Layouts/PageContainer";
 import {
   Box,
   Center,
@@ -17,7 +16,6 @@ import {
   CardBody,
   color,
 } from "@chakra-ui/react";
-import { PageContainer } from "@/patterns/Layouts/PageContainer";
 
 const breadcrumb = [
   { text: "Home", link: "/" },
@@ -29,43 +27,35 @@ const index = () => {
     <>
       <Banner title="Reports-Analytics" breadcrumb={breadcrumb} />
       <PageContainer>
-        <Box py={[5, 20]}>
-          <SimpleGrid columns={[1, 2]} spacing={3}>
-            {REPORTSAN.map((item, index) => (
-              <>
-                <Box key={index} px={10} alignItems="center">
-                  <Heading pb={15} color={"gray.700"} size={["md", "2xl"]}>
-                    {item.heading}
-                  </Heading>
-                  <Text py={10} color={"grey.300"} fontSize="md">
-                    {item.paragraph}
-                  </Text>
-                </Box>
-                <Box key={index}>
-                  <Image src={item.img} />
-                </Box>
-              </>
-            ))}
-          </SimpleGrid>
+        <Box>
+          {REPORTSAN.map((REPORTSAN, index) => {
+            return <ImageTextTable index={1} imageTextdata={REPORTSAN} />;
+          })}
         </Box>
 
-        <Center py={10}>
+        <Center py={10} px={10}>
           <Heading color="gray.700"> Channel-Specific Analytics</Heading>
         </Center>
 
-        <SimpleGrid columns={[1, 4]} spacing={10} px={10} py={20}>
+        <SimpleGrid columns={[1, 4]} spacing={10} px={10} py={15}>
           {REPORTCARDS.map((item, index) => {
             return (
               <Box
                 key={index}
-                boxShadow={"2xl"}
+                textAlign="center"
+                boxShadow={"xl"}
                 p={5}
-                bg={"gray.100"}
-                _hover={{ bg: "blue.400", color: "white", cursor: "pointer" }}
+                bg={"white.100"}
+                _hover={{
+                  bgImage:
+                    "http://web.msdi.in/wp-content/uploads/2023/01/info_hover_bg.jpg",
+                  color: "white",
+                  cursor: "pointer",
+                }}
               >
-                <Heading py={5} size={"md"} color="gray.900">
+                <Text py={5} fontSize={20} fontWeight="bold">
                   {item.heading}
-                </Heading>
+                </Text>
                 <Text size={"sm"}>{item.paragraph}</Text>
               </Box>
             );
