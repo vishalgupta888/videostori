@@ -1,7 +1,12 @@
 import Banner from "@/patterns/Banner";
-import { Box, Flex, Heading, Text, Image } from "@chakra-ui/react";
+import { Box, Flex, Heading, Text, Icon } from "@chakra-ui/react";
 import React from "react";
 import { BiShapeSquare } from "react-icons/bi";
+import { AiOutlineQuestionCircle, AiOutlineBarChart } from "react-icons/ai";
+import { MdOutlineShapeLine, MdOutlineMarkEmailRead } from "react-icons/md";
+import { IoIosCall } from "react-icons/io";
+import { BsHandIndexThumb,BsQuestionLg, BsChatLeft} from "react-icons/bs";
+import { FaRegImages,FaTextWidth,FaWpforms,FaShoppingBag, FaHandPointUp,FaRegFileVideo, FaRegFileImage,FaCcApplePay, FaLanguage, FaRoute} from "react-icons/fa";
 import ImageTextTable from "../ImageTextTable";
 import { interactText } from "@/constants/layoutConstants";
 import { PageContainer } from "@/patterns/Layouts/PageContainer";
@@ -18,93 +23,93 @@ const InteractiveVideo = () => {
   const itemData = [
     {
       id: "1",
-      icon: <BiShapeSquare />,
+      icon: MdOutlineShapeLine,
       text: "Shapes",
     },
     {
       id: "2",
-      icon: <BiShapeSquare />,
-      text: "Shapes",
+      icon: FaRegImages,
+      text: "Image",
     },
     {
       id: "3",
-      icon: <BiShapeSquare />,
-      text: "Shapes",
+      icon: FaTextWidth,
+      text: "Text",
     },
     {
       id: "4",
-      icon: <BiShapeSquare />,
-      text: "Shapes",
+      icon: BsHandIndexThumb,
+      text: "Button",
     },
     {
       id: "5",
-      icon: <BiShapeSquare />,
-      text: "Shapes",
+      icon: FaWpforms,
+      text: "Form",
     },
     {
       id: "6",
-      icon: <BiShapeSquare />,
-      text: "Shapes",
+      icon: AiOutlineQuestionCircle,
+      text: "MultiChoice",
     },
     {
       id: "7",
-      icon: <BiShapeSquare />,
-      text: "Shapes",
+      icon: FaRoute,
+      text: "Switch Timeline",
     },
     {
       id: "8",
-      icon: <BiShapeSquare />,
-      text: "Shapes",
+      icon: FaShoppingBag,
+      text: "Shoppable",
     },
     {
       id: "9",
-      icon: <BiShapeSquare />,
-      text: "Shapes",
+      icon: BsQuestionLg,
+      text: "Custom Poll",
     },
     {
       id: "10",
-      icon: <BiShapeSquare />,
-      text: "Shapes",
+      icon: AiOutlineBarChart,
+      text: "Lead Generation",
     },
     {
       id: "11",
-      icon: <BiShapeSquare />,
-      text: "Shapes",
+      icon: FaHandPointUp,
+      text: "Click Capture",
     },
     {
       id: "12",
-      icon: <BiShapeSquare />,
-      text: "Shapes",
+      icon: FaRegFileVideo,
+      text: "Switch Video",
     },
     {
       id: "13",
-      icon: <BiShapeSquare />,
-      text: "Shapes",
+      icon: FaRegFileImage,
+      text: "Open Image",
     },
     {
       id: "14",
-      icon: <BiShapeSquare />,
-      text: "Shapes",
+      icon: BsChatLeft,
+      text: "Feedback",
     },
     {
       id: "15",
-      icon: <BiShapeSquare />,
-      text: "Shapes",
+      icon: IoIosCall,
+      text: "Call in Video",
     },
     {
       id: "16",
-      icon: <BiShapeSquare />,
-      text: "Shapes",
+      icon: MdOutlineMarkEmailRead,
+      text: "Email in Video",
     },
     {
       id: "17",
-      icon: <BiShapeSquare />,
-      text: "Shapes",
+      icon: FaCcApplePay,
+      text: "Download App",
     },
     {
       id: "18",
-      icon: <BiShapeSquare />,
-      text: "Shapes",
+      icon: FaLanguage,
+      text: "Language Selection",
     },
   ];
   return (
@@ -125,18 +130,25 @@ const InteractiveVideo = () => {
             return (
               <Box
                 key={item.id}
-                h="160px"
+                h={["130px","160px"]}
+                w={["140px","175px"]}
                 display="flex"
                 flexDirection={"column"}
                 alignItems="center"
                 justifyContent="center"
-                w="190px"
-                m="20px"
+                m="15px"
                 boxShadow="rgba(100, 100, 111, 0.2) 0px 7px 29px 0px"
                 _hover={{ bg: "black", color: "white", cursor: "pointer" }}
               >
-                <Box h="30px">{item.icon}</Box>
-                <Text>{item.text}</Text>
+                <Icon
+                  cursor={"pointer"}
+                  as={item.icon}
+                  boxSize={[42,70]}
+                  fill="red"
+                  mb={5}
+                  _hover={{ fill: 'white'}}
+                />               
+                 <Text textAlign={'center'}>{item.text}</Text>
               </Box>
             );
           })}
