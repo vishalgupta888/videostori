@@ -12,8 +12,8 @@ import { BiLeftArrowAlt, BiRightArrowAlt } from "react-icons/bi";
 import { BsCheckCircle } from "react-icons/bs";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
 import VideoPlayer from "@/patterns/VideoPlayer";
+import "slick-carousel/slick/slick-theme.css";
 
 const settings = {
   dots: false,
@@ -37,31 +37,31 @@ export default function Carousel() {
       img: "assets/img1.png",
       label: "Quit boring survey and make them interactive like never before",
       desc: "Create a Survey now on Video. Collect feedback on Videos. The plain and boring surveys can now be made interesting with a story and capturing user responses on Video. Capture user insights while surveying or collecting feedback/response.",
-      subdesc: "Bringing new video Surveys formats"
+      subdesc: "Bringing new video Surveys formats",
     },
     {
       img: "assets/img2.png",
       label: "Now brand can use Videos to Personalize the Shopping Experience",
       desc: "A video is a visually appealing format for shoppers. Videostori enables conversion of  linear videos to shoppable videos thus reducing the friction and streamlining the shopping experience. This enables the viewer to shop directly from the Video.",
-      subdesc: "Bringing new video Surveys formats"
+      subdesc: "Bringing new video Surveys formats",
     },
     {
       img: "assets/img3.png",
       label: "Use Interactive Videos and start making leads",
       desc: "Interactive Videos are a great source to generate leads. Interactive Videos can be designed to guide viewers, with each interactive element helping to move the viewer to take a specific action. The viewer can share his response on the CTA included within the Video preventing fall-offs.",
-      subdesc: "Bringing new video Surveys formats"
+      subdesc: "Bringing new video Surveys formats",
     },
     {
       img: "assets/img4.png",
       label: "Use Hotspots in your Videos and create the magic",
       desc: "Hotspots can make any part of the Video clickable thus enabling a variety of Interactive actions. By providing Interactive Experiences, Hotspots help increase Engagement and Retention, and provide a more Dynamic User Experience.",
-      subdesc: "Bringing new video Surveys formats"
+      subdesc: "Bringing new video Surveys formats",
     },
     {
       img: "assets/img5.png",
       label: "Rewind and Fast-Forward",
       desc: "Interact with our switch timeline videos according to the interest and intent. Switch timeline is great feature where there is large amount of content and viewer has the power to define the path of the story",
-      subdesc: "Bringing new video Surveys formats"
+      subdesc: "Bringing new video Surveys formats",
     },
   ];
 
@@ -105,43 +105,36 @@ export default function Carousel() {
       <Slider {...settings} ref={(slider) => setSlider(slider)}>
         {cards.map((item, index) => (
           <Box key={index} w="100%" py={20}>
-            <Flex w="100%" h="400px" direction={["column-reverse", "row"]} justifyContent="space-evenly">
-              <Flex direction={"column"} p={5} width={["100%", "40%"]} alignSelf="center">
-                <Text
-                  pos={"relative"}
-                  fontSize={["2xl"]}
-                  fontWeight="bold"
-                >
+            <Flex
+              w="100%"
+              h="400px"
+              direction={["column-reverse", "row"]}
+              justifyContent="space-evenly"
+            >
+              <Flex
+                direction={"column"}
+                p={5}
+                width={["100%", "40%"]}
+                alignSelf="center"
+              >
+                <Text pos={"relative"} fontSize={["2xl"]} fontWeight="bold">
                   {item.label}
                 </Text>
-                <Text
-                  pos={"relative"}
-                  py={8}
-                  lineHeight={7}
-                  fontSize={["sm"]}
-                >
+                <Text pos={"relative"} py={8} lineHeight={7} fontSize={["sm"]}>
                   {item.desc}
                 </Text>
                 <Flex>
-                <Icon
-                  as={BsCheckCircle}
-                  boxSize={5}
-                  fill="red"
-                />
-                <Text
-                  pos={"relative"}
-                  fontSize={["sm"]}
-                  px={4}
-                >
-                  {item.subdesc}
-                </Text>
+                  <Icon as={BsCheckCircle} boxSize={5} fill="red" />
+                  <Text pos={"relative"} fontSize={["sm"]} px={4}>
+                    {item.subdesc}
+                  </Text>
                 </Flex>
               </Flex>
               <VideoPlayer
                 p={10}
                 width={["90%", "45%"]}
                 height={["70%", "100%"]}
-                alignSelf={["center","normal"]}
+                alignSelf={["center", "normal"]}
                 videodata={{
                   thumbnail: item.img,
                   videosrc: "https://videostori.io/v/l4/IVyEio",

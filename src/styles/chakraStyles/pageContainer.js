@@ -5,8 +5,8 @@ export const pageContainer = {
             flexDirection: "column",
             width: "100%",
             boxSizing: "border-box",
-            paddingLeft: ["5vw", "8vw"],
-            paddingRight: ["5vw", "8vw"],
+            paddingLeft: ["3vw", "2vw"],
+            paddingRight: ["3vw", "2vw"],
             paddingTop: "3vw",
             paddingBottom:"3vw"
         }
