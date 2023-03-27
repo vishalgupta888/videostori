@@ -23,8 +23,11 @@ import {
   ChevronRightIcon,
 } from "@chakra-ui/icons";
 
+import { useRouter } from "next/router";
+
 export default function Navbar() {
   const { isOpen, onToggle } = useDisclosure();
+  const router = useRouter()
 
   return (
     <Box fontFamily={"Roboto"}>
@@ -81,6 +84,7 @@ export default function Navbar() {
             borderColor={"red"}
             px={4}
             href={"#"}
+            onClick={()=> { router.push('https://videostori.io/login') }}
           >
             Login
           </Button>
@@ -94,6 +98,8 @@ export default function Navbar() {
             _hover={{
               cursor: "pointer",
             }}
+            onClick={()=> { router.push('https://videostori.io/signup') }}
+
           >
             Signup
           </Button>
