@@ -49,24 +49,25 @@ export default function Footer() {
     <Box
       bg={useColorModeValue("#1b1f2b", "gray.900")}
       color={useColorModeValue("gray.400", "gray.200")}
-      mt={[0, 32]}
+      mt={[52, 32]}
     >
       <Flex
-        display={["none", "flex"]}
+        direction={["column","row"]}
         position={"absolute"}
-        bottom={"630px"}
+        bottom={["19%","14%"]}
         left="2%"
         w="96%"
-        h="26vh"
-        alignItems={"center"}
-        justifyContent="space-between"
-        px={"100px"}
+        h={["40vh","26vh"]}
+        alignItems={["flex-start","center"]}
+        justifyContent={["space-evenly","space-between"]}
+        px={[10,"100px"]}
         zIndex={1}
         bg="#303441"
+        mb={8}
       >
         <Flex direction={"column"} color="#1b1f2e" fontWeight={"bold"}>
           <Text py={4}>Need Any Consultations ?</Text>
-          <Text fontSize={"4xl"}>We’re Ready to Growth IT Business</Text>
+          <Text fontSize={["xl","4xl"]}>We’re Ready to Growth IT Business</Text>
         </Flex>
         <Flex>
           <Button mx="4" bg="#1b1f2e" color={"white"} _hover={{ bg: "red" }}>
