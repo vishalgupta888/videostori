@@ -24,7 +24,7 @@ const SwitchTimeline = () => {
         })}
 
       <Box h="auto" bg="#fff" px={10}>
-        <Box py={10}>
+        <Box py={5}>
           <Center>
             <Heading
               color="#1b1f2e"
@@ -47,7 +47,7 @@ const SwitchTimeline = () => {
               <Box
                 key={item?.id}
                 p={[0, 4]}
-                py={[10, 20]}
+                py={[10, 15]}
                 _hover={{ div: { color: "#2D2727" } }}
               >
                 <Stack pb={8} alignItems={["right", "center"]}>
@@ -95,7 +95,7 @@ const SwitchTimeline = () => {
         </SimpleGrid>
       </Box>
 
-      <Center py={6} px={10}>
+      <Center pt={20} px={10}>
         <Text fontSize="30px" color="red.400">
           {" "}
           Timeline Switch can be used following cases
