@@ -6,7 +6,7 @@ import ImageTextTable from '../ImageTextTable';
 
 const AppAcquistion = () => {
   const breadcrumb = [
-    { text: "Home", link: "/" },
+    { text: "Home", link: "/"},
     { text: "App Acquisition Videos", link: "/app-acquistion-videos/" },
   ];
 
