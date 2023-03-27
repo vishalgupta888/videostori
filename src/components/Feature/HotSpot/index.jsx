@@ -62,39 +62,6 @@ const HotSpot = () => {
             ))}
           </SimpleGrid>
         </Box>
-        <Box p={[5, 20]}>
-          <SimpleGrid columns={[1, 2]} spacing={3}>
-            <>
-              <Stack px={5}>
-                {HOTSPOTCARD1.map((item, index) => (
-                  <Card
-                    direction={{ base: "column", sm: "row" }}
-                    overflow="hidden"
-                    boxShadow={"2xl"}
-                  >
-                    <Image
-                      src={item.img}
-                      w={"115px"}
-                      p="5"
-                      bgColor="red.300"
-                    ></Image>
-                    <Stack>
-                      <CardBody>
-                        <Heading size="md" color={"gray.700"}>
-                          {item.heading}
-                        </Heading>
-                        <Text py="2">{item.paragraph}</Text>
-                      </CardBody>
-                    </Stack>
-                  </Card>
-                ))}
-              </Stack>
-              <Box>
-                <Image src="/assets/img5.png"></Image>
-              </Box>
-            </>
-          </SimpleGrid>
-        </Box>
 
         <Box p={[5, 20]}>
           <SimpleGrid columns={[1, 2]} spacing={3}>
