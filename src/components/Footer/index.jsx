@@ -1,78 +1,170 @@
 import {
   Box,
+  Button,
   Container,
+  Flex,
+  Icon,
+  Image,
+  Input,
   Link,
   SimpleGrid,
   Stack,
   Text,
   useColorModeValue,
-} from '@chakra-ui/react';
-
+} from "@chakra-ui/react";
+import { MdPhoneEnabled } from "react-icons/md";
+import {
+  FaFacebookF,
+  FaTwitter,
+  FaInstagram,
+  FaWhatsapp,
+} from "react-icons/fa";
+import { FiFacebook } from "react-icons/fi";
 
 const ListHeader = ({ children }) => {
   return (
-    <Text fontWeight={'500'} fontSize={'lg'} mb={2}>
+    <Text fontWeight={"500"} fontSize={"lg"} mb={2}>
       {children}
     </Text>
   );
 };
 
+const footerIcons = [
+  {
+    item: FaFacebookF,
+  },
+  {
+    item: FaTwitter,
+  },
+  {
+    item: FaInstagram,
+  },
+  {
+    item: FaWhatsapp,
+  },
+];
+
 export default function Footer() {
   return (
     <Box
-      bg={useColorModeValue('#13161F', 'gray.900')}
-      color={useColorModeValue('gray.400', 'gray.200')}>
-      <Container as={Stack} maxW={'6xl'} py={'100px'}>
+      bg={useColorModeValue("#1b1f2b", "gray.900")}
+      color={useColorModeValue("gray.400", "gray.200")}
+      mt={[0, 32]}
+    >
+      <Flex
+        display={["none", "flex"]}
+        position={"absolute"}
+        bottom={"630px"}
+        left="2%"
+        w="96%"
+        h="26vh"
+        alignItems={"center"}
+        justifyContent="space-between"
+        px={"100px"}
+        zIndex={1}
+        bg="#303441"
+      >
+        <Flex direction={"column"} color="#1b1f2e" fontWeight={"bold"}>
+          <Text py={4}>Need Any Consultations ?</Text>
+          <Text fontSize={"4xl"}>We’re Ready to Growth IT Business</Text>
+        </Flex>
+        <Flex>
+          <Button mx="4" bg="#1b1f2e" color={"white"} _hover={{ bg: "red" }}>
+            Get Free Quote
+          </Button>
+          <Icon
+            cursor={"pointer"}
+            borderRadius="50%"
+            bg="white"
+            as={MdPhoneEnabled}
+            boxSize={8}
+            fill="red"
+          />
+        </Flex>
+      </Flex>
+      <Container as={Stack} maxW={"90%"} py={"130px"}>
         <SimpleGrid
-          templateColumns={{ sm: '1fr 1fr', md: '2fr 1fr 1fr 1fr 1fr' }}
-          spacing={8}>
-          <Stack spacing={6}>
+          templateColumns={{ sm: "1fr 1fr", md: "3fr 2fr 2fr 2fr" }}
+          spacing={8}
+        >
+          <Stack spacing={14} display="flex" justifyContent="center">
             <Box>
+              <Image height="154px" src="/assets/footerLogo.jpg" />
             </Box>
-            <Text fontSize={'sm'}>
-              © 2022 Chakra Templates. All rights reserved
-            </Text>
-            <Text fontSize={'sm'}>
-              © 2022 Chakra Templates. All rights reserved
-            </Text>
-            <Text fontSize={'sm'}>
-              © 2022 Chakra Templates. All rights reserved
+            <Text fontSize={"sm"} w={["100%", "65%"]}>
+              Sed ut perspiciatis unde omnis iste natus error sit voluptatem
+              accntiumc doloremque laudantium totam
             </Text>
           </Stack>
-          <Stack align={'flex-start'}>
-            <ListHeader>Product</ListHeader>
-            <Link href={'#'}>Overview</Link>
-            <Link href={'#'}>Features</Link>
-            <Link href={'#'}>Tutorials</Link>
-            <Link href={'#'}>Pricing</Link>
-            <Link href={'#'}>Releases</Link>
+          <Stack align={"flex-start"} spacing={[5, 8]}>
+            <Text fontSize={"2xl"} color="white" fontWeight="bold">
+              Services
+            </Text>
+            <Link href={"#"}>Product Design</Link>
+            <Link href={"#"}>Design & Development</Link>
+            <Link href={"#"}>UX/UI Strategy</Link>
+            <Link href={"#"}>Search Engine</Link>
+            <Link href={"#"}>IT Consulting</Link>
+            <Link href={"#"}>Business Analysis</Link>
           </Stack>
-          <Stack align={'flex-start'}>
-            <ListHeader>Company</ListHeader>
-            <Link href={'#'}>About</Link>
-            <Link href={'#'}>Press</Link>
-            <Link href={'#'}>Careers</Link>
-            <Link href={'#'}>Contact</Link>
-            <Link href={'#'}>Partners</Link>
+          <Stack align={"flex-start"} spacing={8}>
+            <Text fontSize={"2xl"} color="white" fontWeight="bold">
+              Support
+            </Text>
+            <Link href={"#"}>Start Here</Link>
+            <Link href={"#"}>Style guide</Link>
+            <Link href={"#"}>About Company</Link>
+            <Link href={"#"}>Password Protected</Link>
+            <Link href={"#"}>Licenses</Link>
+            <Link href={"#"}>Changelog</Link>
           </Stack>
-          <Stack align={'flex-start'}>
-            <ListHeader>Support</ListHeader>
-            <Link href={'#'}>Help Center</Link>
-            <Link href={'#'}>Terms of Service</Link>
-            <Link href={'#'}>Legal</Link>
-            <Link href={'#'}>Privacy Policy</Link>
-            <Link href={'#'}>Status</Link>
-          </Stack>
-          <Stack align={'flex-start'}>
-            <ListHeader>Follow Us</ListHeader>
-            <Link href={'#'}>Facebook</Link>
-            <Link href={'#'}>Twitter</Link>
-            <Link href={'#'}>Dribbble</Link>
-            <Link href={'#'}>Instagram</Link>
-            <Link href={'#'}>LinkedIn</Link>
+          <Stack align={"flex-start"} spacing={8}>
+            <Text fontSize={"2xl"} color="white" fontWeight="bold">
+              Newsletter
+            </Text>
+            <Text>
+              Sed perspiciatis unde omnste natus error voluptatem accusante.
+            </Text>
+            <Stack direction={"row"} py={6}>
+              <Input size={"xs"} variant="flushed" mr={6} />
+              <Button
+                colorScheme="gray"
+                px={6}
+                borderRadius="0"
+                _hover={{
+                  bg: "#1b1f2e",
+                }}
+              >
+                Submit
+              </Button>
+            </Stack>
+            <Link href={"#"}>Follow Us</Link>
+            <Flex>
+              {footerIcons.map((icon) => {
+                return (
+                  <Icon
+                    cursor={"pointer"}
+                    as={icon.item}
+                    mr={4}
+                    boxSize={5}
+                    fill="gray.300"
+                    _hover={{ fill: "red" }}
+                  />
+                );
+              })}
+            </Flex>
           </Stack>
         </SimpleGrid>
       </Container>
+      <Box
+        display="flex"
+        alignItems="center"
+        justifyContent="center"
+        bg="#0f1425"
+        h="10vh"
+      >
+        <Text color="gray.500">Copyright © 2022. All rights reserved.</Text>
+      </Box>
     </Box>
   );
 }
