@@ -69,13 +69,15 @@ const InteractSection = (props) => {
           bgImage="url('http://web.msdi.in/wp-content/uploads/2022/12/work-process-line.png')"
           bgRepeat="no-repeat"
         >
-          {CARDS.map((item) => {
+          {CARDS.map((item,index) => {
             return (
               <Box
                 key={item?.id}
                 p={[0, 6]}
                 py={30}
+                transform={index % 2 === 1 ? (index === 1 ? "translateY(30px)" : "translateY(-30px)") : ""}
                 _hover={{ div: { color: "#2D2727"} }}
+                cursor={'pointer'}
               >
                 <Stack pb={8} alignItems={["right", "center"]}>
                   <Circle
@@ -103,12 +105,12 @@ const InteractSection = (props) => {
                     color="#1b1f2e"
                     as="a"
                     _hover={{ color: "#fff" }}
-                    p={5}
+                    p={1}
                   >
-                    <Text fontSize="22px" my={5} fontWeight="bold">
+                    <Text fontSize="18px" my={3} fontWeight="bold">
                       {item?.heading}
                     </Text>
-                    <Text fontSize="18px" fontWeight="semi-bold">
+                    <Text fontSize="16px">
                       {item?.paragraph}
                     </Text>
                   </VStack>
