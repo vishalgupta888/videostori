@@ -29,7 +29,7 @@ const settings = {
 
 export default function Carousel() {
   const [slider, setSlider] = useState(null);
-  const top = useBreakpointValue({ base: "90%", md: "60%" });
+  const top = useBreakpointValue({ base: "88%", md: "60%" });
   const side = useBreakpointValue({ base: "30%", md: "5px" });
 
   const cards = [
@@ -43,25 +43,25 @@ export default function Carousel() {
       img: "assets/img2.png",
       label: "Now brand can use Videos to Personalize the Shopping Experience",
       desc: "A video is a visually appealing format for shoppers. Videostori enables conversion of  linear videos to shoppable videos thus reducing the friction and streamlining the shopping experience. This enables the viewer to shop directly from the Video.",
-      subdesc: "Bringing new video Surveys formats",
+      subdesc: "Shop Till You Drop: The Evolution of Video Commerce"
     },
     {
       img: "assets/img3.png",
       label: "Use Interactive Videos and start making leads",
       desc: "Interactive Videos are a great source to generate leads. Interactive Videos can be designed to guide viewers, with each interactive element helping to move the viewer to take a specific action. The viewer can share his response on the CTA included within the Video preventing fall-offs.",
-      subdesc: "Bringing new video Surveys formats",
+      subdesc: "The New and Exciting way to Generate Leads"
     },
     {
       img: "assets/img4.png",
       label: "Use Hotspots in your Videos and create the magic",
       desc: "Hotspots can make any part of the Video clickable thus enabling a variety of Interactive actions. By providing Interactive Experiences, Hotspots help increase Engagement and Retention, and provide a more Dynamic User Experience.",
-      subdesc: "Bringing new video Surveys formats",
+      subdesc: "Hotspot: The new engagement tool in the Video world"
     },
     {
       img: "assets/img5.png",
       label: "Rewind and Fast-Forward",
       desc: "Interact with our switch timeline videos according to the interest and intent. Switch timeline is great feature where there is large amount of content and viewer has the power to define the path of the story",
-      subdesc: "Bringing new video Surveys formats",
+      subdesc: "Bringing new video solutions to the market"
     },
   ];
 
