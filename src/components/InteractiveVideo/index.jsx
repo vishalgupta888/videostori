@@ -1,12 +1,31 @@
 import Banner from "@/patterns/Banner";
-import { Box, Flex, Heading, Text, Icon } from "@chakra-ui/react";
+import {
+  Box,
+  Flex,
+  Heading,
+  Text,
+  Icon,
+  SimpleGrid,
+  GridItem,
+} from "@chakra-ui/react";
 import React from "react";
 import { BiShapeSquare } from "react-icons/bi";
 import { AiOutlineQuestionCircle, AiOutlineBarChart } from "react-icons/ai";
 import { MdOutlineShapeLine, MdOutlineMarkEmailRead } from "react-icons/md";
 import { IoIosCall } from "react-icons/io";
-import { BsHandIndexThumb,BsQuestionLg, BsChatLeft} from "react-icons/bs";
-import { FaRegImages,FaTextWidth,FaWpforms,FaShoppingBag, FaHandPointUp,FaRegFileVideo, FaRegFileImage,FaCcApplePay, FaLanguage, FaRoute} from "react-icons/fa";
+import { BsHandIndexThumb, BsQuestionLg, BsChatLeft } from "react-icons/bs";
+import {
+  FaRegImages,
+  FaTextWidth,
+  FaWpforms,
+  FaShoppingBag,
+  FaHandPointUp,
+  FaRegFileVideo,
+  FaRegFileImage,
+  FaCcApplePay,
+  FaLanguage,
+  FaRoute,
+} from "react-icons/fa";
 import ImageTextTable from "../ImageTextTable";
 import { interactText } from "@/constants/layoutConstants";
 import { PageContainer } from "@/patterns/Layouts/PageContainer";
@@ -117,42 +136,49 @@ const InteractiveVideo = () => {
       <Banner title="Interactive Video" breadcrumb={breadcrumb} />
       <PageContainer>
         <ImageTextTable imageTextdata={interactText} />
-        <Heading variant="headLine" textAlign={"center"}>
+        <Heading
+          mx="auto"
+          w={["100%", "40%"]}
+          variant="headingsInPage"
+          color="text.headline"
+          textAlign={"center"}
+        >
           Interactive video with interactive Elements
         </Heading>
-        <Flex
-          flexWrap={"wrap"}
-          justifyContent={"center"}
-          alignItems="center"
-          my="70px"
-        >
+        <SimpleGrid columns={[2, 6]} mx="auto">
           {itemData.map((item) => {
             return (
-              <Box
+              <GridItem
                 key={item.id}
-                h={["130px","160px"]}
-                w={["140px","175px"]}
+                h={["130px", "160px"]}
+                w={["140px", "175px"]}
                 display="flex"
                 flexDirection={"column"}
                 alignItems="center"
                 justifyContent="center"
                 m="15px"
                 boxShadow="rgba(100, 100, 111, 0.2) 0px 7px 29px 0px"
-                _hover={{ bg: "black", color: "white", cursor: "pointer" }}
+                _hover={{
+                  bg: "black",
+                  color: "white",
+                  cursor: "pointer",
+                  svg: { fill: "white" },
+                }}
               >
                 <Icon
                   cursor={"pointer"}
                   as={item.icon}
-                  boxSize={[42,70]}
-                  fill="red"
+                  boxSize={[42, 70]}
+                  fill="rgb(244,48,48,0.9)"
                   mb={5}
-                  _hover={{ fill: 'white'}}
-                />               
-                 <Text textAlign={'center'}>{item.text}</Text>
-              </Box>
+                />
+                <Text textAlign={"center"} fontSize="18px" fontWeight={600}>
+                  {item.text}
+                </Text>
+              </GridItem>
             );
           })}
-        </Flex>
+        </SimpleGrid>
       </PageContainer>
     </Box>
   );

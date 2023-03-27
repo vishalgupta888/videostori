@@ -19,7 +19,9 @@ const ImageTextTable = ({ imageTextdata, isVideo, index }) => {
       {isVideo ? (
         <VideoPlayer
           p={10}
+          m={[0, 10]}
           width={["100%", "50%"]}
+          h={["40vh", "auto"]}
           videodata={{
             thumbnail: imageTextdata.thumb,
             videosrc: imageTextdata.src,

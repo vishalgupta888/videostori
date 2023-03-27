@@ -11,9 +11,11 @@ const TextSection = (props) => {
       justifyContent="space-around"
       {...props}
     >
-      <Heading variant={"headLine"} my="1em">
-        {title}
-      </Heading>
+      {title && (
+        <Heading variant={"headLine"} my="1em">
+          {title}
+        </Heading>
+      )}
       <Text variant={"body"} my="1em">
         {description}
       </Text>

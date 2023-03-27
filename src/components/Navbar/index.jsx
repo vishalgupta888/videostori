@@ -27,10 +27,10 @@ export default function Navbar() {
   const { isOpen, onToggle } = useDisclosure();
 
   return (
-    <Box>
+    <Box fontFamily={"Roboto"}>
       <Flex
         bg={useColorModeValue("white", "gray.800")}
-        color={useColorModeValue("gray.600", "white")}
+        color={useColorModeValue("#1b1f2e", "white")}
         minH={"100px"}
         py={{ base: 2 }}
         px={{ base: 4 }}
@@ -108,8 +108,8 @@ export default function Navbar() {
 }
 
 const DesktopNav = () => {
-  const linkColor = useColorModeValue("gray.600", "gray.200");
-  const linkHoverColor = useColorModeValue("gray.800", "white");
+  const linkColor = useColorModeValue("#1b1f2e", "#1b1f2e");
+  const linkHoverColor = useColorModeValue("rgb(244,48,48,0.9)", "white");
   const popoverContentBgColor = useColorModeValue("white", "gray.800");
 
   return (
@@ -128,6 +128,7 @@ const DesktopNav = () => {
                   textDecoration: "none",
                   color: linkHoverColor,
                 }}
+                _active={{ color: linkHoverColor }}
               >
                 {navItem.label}
               </Link>

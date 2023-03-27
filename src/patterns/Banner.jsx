@@ -8,10 +8,24 @@ import {
 } from "@chakra-ui/react";
 const Banner = ({ title, breadcrumb }) => {
   return (
-    <Center flexDirection="column" h={["40vh", "50vh"]} bg="light_bg.blue">
-      <Heading mx="auto">{title}</Heading>
+    <Center
+      flexDirection="column"
+      p={["5vw", "10vw"]}
+      mx="auto"
+      h={["40vh", "50vh"]}
+      bg="light_bg.blue"
+    >
+      <Heading textAlign="center" mx="auto">
+        {title}
+      </Heading>
       {breadcrumb && (
-        <Breadcrumb mt="1em" textAlign={"center"}>
+        <Breadcrumb
+          w="100%"
+          mt="1em"
+          mx="auto"
+          textAlign={"center"}
+          sx={{ ol: { flexWrap: "wrap", justifyContent: "center" } }}
+        >
           {breadcrumb.map((item, index) => {
             return (
               <BreadcrumbItem
@@ -19,7 +33,9 @@ const Banner = ({ title, breadcrumb }) => {
                 isCurrentPage={item.isCurrentPage}
                 key={index + item.link}
               >
-                <BreadcrumbLink href={item.link}>{item.text}</BreadcrumbLink>
+                <BreadcrumbLink whiteSpace="nowrap" href={item.link}>
+                  {item.text}
+                </BreadcrumbLink>
               </BreadcrumbItem>
             );
           })}
