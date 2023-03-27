@@ -3,7 +3,6 @@ import {HOTSPOTTEXT, HOTSPOTCARD1, HOTSPOTCARD2, HOTSPOTCARD3, HOTSPOTCARD4} fro
 import { Box, Icon, SimpleGrid, Text, Stack, Image, Heading, Card, CardBody, Center} from "@chakra-ui/react";
 import Banner from '@/patterns/Banner';
 import VideoPlayer from "@/patterns/VideoPlayer";
-import {FaHandPointUp} from "react-icons/fa"
 
 const breadcrumb = [
   { text: "Home", link: "/" },
