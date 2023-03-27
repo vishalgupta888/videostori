@@ -40,7 +40,8 @@ const ICONS = [
 
 const breadcrumb = [
     { text: "Home", link: "/" },
-    { text: "Video Distribution", link: "features/videodistribution" },
+    { text: "Interactive Videos", link: "/interactive-video" },
+    { text: "Video Distribution"},
   ];
 
 const index = () => {

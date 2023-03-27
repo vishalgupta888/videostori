@@ -7,7 +7,8 @@ import {FaHandPointUp} from "react-icons/fa"
 
 const breadcrumb = [
   { text: "Home", link: "/" },
-  { text: "Hot Spot", link: "features/hotspot" },
+  { text: "Interactive Videos", link: "/interactive-video" },
+  { text: "Hot Spot"},
 ];
 
 const HotSpot = () => {

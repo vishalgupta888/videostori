@@ -7,7 +7,8 @@ import { Box, Center, SimpleGrid, Text, Flex, Image, Heading, Card, CardBody, co
 
 const breadcrumb = [
     { text: "Home", link: "/" },
-    { text: "Reports-Analytics", link: "features/reportsanalytics" },
+    { text: "Interactive Videos", link: "/interactive-video" },
+    { text: "Reports-Analytics"},
   ];
 
 

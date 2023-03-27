@@ -8,7 +8,8 @@ import { SWITCHTIMELINE } from "@/constants/layoutConstants";
 
 const breadcrumb = [
   { text: "Home", link: "/" },
-  { text: "Switch Timeline", link: "features/switchtimeline" },
+  { text: "Interactive Videos", link: "/interactive-video" },
+  { text: "Switch Timeline"}
 ];
 
 const SwitchTimeline = () => {
