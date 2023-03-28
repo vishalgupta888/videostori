@@ -4,17 +4,11 @@ import { REPORTCARDS } from "@/components/Constant/ShareData";
 import { REPORTSAN, REPORTANALYTICS } from "@/constants/layoutConstants";
 import ImageTextTable from "@/components/ImageTextTable";
 import { PageContainer } from "@/patterns/Layouts/PageContainer";
-import {
-  Box,
-  Center,
-  SimpleGrid,
-  Text,
-  Heading,
-} from "@chakra-ui/react";
+import { Box, Center, SimpleGrid, Text, Heading } from "@chakra-ui/react";
 
 const breadcrumb = [
   { text: "Home", link: "/" },
-  { text: "Features"},
+  { text: "Features" },
   { text: "Reports-Analytics", link: "features/reportsanalytics" },
 ];
 
@@ -23,38 +17,46 @@ const index = () => {
     <>
       <Banner title="Reports-Analytics" breadcrumb={breadcrumb} />
       <PageContainer>
-      <Box>
-        {REPORTSAN.map((REPORTSAN, index) => {
-          return  <ImageTextTable
-            index={1} 
-            imageTextdata={REPORTSAN} 
-          />;
-        })}
-      </Box>
-
-      <Center py={10} px={10}>
-        <Heading color="gray.700"> Channel-Specific Analytics</Heading>
-      </Center>
-
-      <SimpleGrid columns={[1,4]} spacing={10} px={10} py={15}>
-      {REPORTCARDS.map((item, index) => {
-        return(
-        <Box key={index} textAlign="center" boxShadow={'xl'} p={5} bg={'white.100'} _hover={{ bgImage: "http://web.msdi.in/wp-content/uploads/2023/01/info_hover_bg.jpg", color: "white", cursor: "pointer" }}>
-            <Text py={5} fontSize={20} fontWeight='bold'>{item.heading}</Text>
-            <Text size={'sm'}>{item.paragraph}</Text>
+        <Box>
+          {REPORTSAN.map((REPORTSAN, index) => {
+            return <ImageTextTable index={1} imageTextdata={REPORTSAN} />;
+          })}
         </Box>
-        );
-        })}
-      </SimpleGrid>
 
-      <Box>
-      {REPORTANALYTICS.map((REPORTANALYTICS, index) => {
-          return  <ImageTextTable
-            index={2} 
-            imageTextdata={REPORTANALYTICS} 
-          />;
-        })}
-    </Box>
+        <Center py={10} px={10}>
+          <Heading color="gray.700"> Channel-Specific Analytics</Heading>
+        </Center>
+
+        <SimpleGrid columns={[1, 4]} spacing={10} px={10} py={15}>
+          {REPORTCARDS.map((item, index) => {
+            return (
+              <Box
+                key={index}
+                textAlign="center"
+                boxShadow={"xl"}
+                p={5}
+                bg={"white.100"}
+                _hover={{
+                  bgImage:
+                    "http://web.msdi.in/wp-content/uploads/2023/01/info_hover_bg.jpg",
+                  color: "white",
+                  cursor: "pointer",
+                }}
+              >
+                <Text py={5} fontSize={20} fontWeight="bold">
+                  {item.heading}
+                </Text>
+                <Text size={"sm"}>{item.paragraph}</Text>
+              </Box>
+            );
+          })}
+        </SimpleGrid>
+
+        <Box>
+          {REPORTANALYTICS.map((REPORTANALYTICS, index) => {
+            return <ImageTextTable index={2} imageTextdata={REPORTANALYTICS} />;
+          })}
+        </Box>
       </PageContainer>
     </>
   );
