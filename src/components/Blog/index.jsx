@@ -3,14 +3,10 @@ import { blogText } from "@/constants/layoutConstants";
 import ImageTextTable from "../ImageTextTable";
 
 const Blog = () => {
-  const breadcrumbs = [
-    { text: "Home", link: "/" },
-    { text: "Blog", link: "blog", isCurrentPage: true },
-  ];
   return (
     <>
-      <Banner title="Latest Blog" breadcrumb={breadcrumbs} />
-      <ImageTextTable imageTextdata={blogText} />
+      <Banner title="Latest Blog" />
+      <ImageTextTable imageTextdata={blogText} index={2} />
     </>
   );
 };

@@ -13,7 +13,7 @@ import { MdOutlineGroups3,MdOutlineScreenSearchDesktop } from 'react-icons/md';
 
 export default function FeatureSection() {
   return (
-    <Box bg={'gray.800'} position={'relative'}>
+    <Box className='hidden' bg={'gray.800'} position={'relative'}>
       <Flex
         flex={1}
         zIndex={0}

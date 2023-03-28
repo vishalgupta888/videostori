@@ -319,6 +319,6 @@ const NAV_ITEMS = [
   },
   {
     label: "Blog",
-    href: "#",
+    href: "/blog",
   },
 ];
