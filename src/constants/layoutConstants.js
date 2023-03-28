@@ -61,6 +61,23 @@ export const appText = {
     description: 'Apps provide a platform for the viewers where he can navigate his own journey and use them as he pleases but app acquisition is still done in a boring way through Display Ads mostly. When it is done through the Videos also the performance managers expect the users to search to various app stores and then download their apps which results in a fall-off. Videostori provides a medium wherein performance managers can do their app acquisition campaigns through the Interactive Videos. The businesses have to prepare a video on what their app is and the problem it will solve for the viewer and then at relevant positions a hotspot can be used to help viewers directly download the video after clicking on those hotspots. This will help take away the memory issues and prevent unnecessary fall-offs thus leading to better engagement and conversions.Click here to try the platform '
 }
 
+export const HOTSPOTTEXT = [
+    {
+      thumb: '/assets/img2.png',
+      src: 'https://videostori.io/v/l4/IVx51S',
+      title: "Create Interactivity anywhere on Video by embedding Hotspots",
+      description:
+        "From triggering an app download to creating shoppable Videos they provide a more dynamic and engaging user experience. Hotspots are a powerful tool for engaging viewers and increasing user interaction with video content thus increasing conversions.Hotspots enable a range of actions on any screen on your Video or  on any product displayed on your Video. Learn more about Hotspot elements enabled by Videostori by clicking below.",
+    },
+  ];
+
+  export const HOTSPOTCARD = [
+    {
+      thumb: '/assets/img2.png',
+      src: 'https://videostori.io/v/l4/IVx51S',
+    },
+  ];
+
 export const SWITCHTIMELINE = [
     {
         thumb: '/assets/img5.png',

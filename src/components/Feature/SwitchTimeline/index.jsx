@@ -10,7 +10,6 @@ import {
   Text,
   Stack,
   Heading,
-  Link,
   Circle,
   VStack,
 } from "@chakra-ui/react";
@@ -22,7 +21,7 @@ import { PageContainer } from "@/patterns/Layouts/PageContainer";
 
 const breadcrumb = [
   { text: "Home", link: "/" },
-  { text: "Interactive Videos", link: "/interactive-video" },
+  { text: "Features"},
   { text: "Switch Timeline", link: "features/switchtimeline" },
 ];
 

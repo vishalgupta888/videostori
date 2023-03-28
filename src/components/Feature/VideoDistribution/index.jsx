@@ -4,10 +4,8 @@ import { VIDEODB } from "@/constants/layoutConstants";
 import {
   Box,
   Icon,
-  SimpleGrid,
   Text,
   Flex,
-  Image,
   Heading,
 } from "@chakra-ui/react";
 import ImageTextTable from "@/components/ImageTextTable";
@@ -56,7 +54,7 @@ const ICONS = [
 
 const breadcrumb = [
   { text: "Home", link: "/" },
-  { text: "Interactive Videos", link: "/interactive-video" },
+  { text: "Features"},
   { text: "Video Distribution", link: "features/videodistribution" },
 ];
 
@@ -93,9 +91,9 @@ const index = () => {
                 w="190px"
                 m="20px"
                 boxShadow="rgba(100, 100, 111, 0.2) 0px 7px 29px 0px"
-                _hover={{ bg: "black", color: "#fff", cursor: "pointer" }}
+                _hover={{ bg: "black", color: "#fff", cursor: "pointer", svg: { fill: "white" } }}
               >
-                <Icon ms="30" boxSize={20} color="red.500" _hover={{color: "#fff", cursor: "pointer" }}>{item.icon}</Icon>
+                <Icon ms="30" boxSize={20} color="red.500">{item.icon}</Icon>
                 <Text fontSize={'lg'} p={1} fontWeight={'bold'}>{item.text}</Text>
               </Box>
             );

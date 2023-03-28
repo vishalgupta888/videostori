@@ -9,17 +9,12 @@ import {
   Center,
   SimpleGrid,
   Text,
-  Flex,
-  Image,
   Heading,
-  Card,
-  CardBody,
-  color,
 } from "@chakra-ui/react";
 
 const breadcrumb = [
   { text: "Home", link: "/" },
-  { text: "Interactive Videos", link: "/interactive-video" },
+  { text: "Features"},
   { text: "Reports-Analytics", link: "features/reportsanalytics" },
 ];
 
