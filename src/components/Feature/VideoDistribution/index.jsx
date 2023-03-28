@@ -78,7 +78,7 @@ const index = () => {
                 boxShadow="rgba(100, 100, 111, 0.2) 0px 7px 29px 0px"
                 _hover={{ bg: "black", color: "#fff", cursor: "pointer" }}
               >
-                <Icon ms="30" boxSize={20} color="red.500">{item.icon}</Icon>
+                <Icon ms="30" boxSize={20} color="red.500" _hover={{color: "#fff", cursor: "pointer" }}>{item.icon}</Icon>
                 <Text fontSize={'lg'} p={1} fontWeight={'bold'}>{item.text}</Text>
               </Box>
             );
