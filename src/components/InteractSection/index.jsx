@@ -76,7 +76,7 @@ const InteractSection = (props) => {
                 p={[0, 6]}
                 py={30}
                 _hover={{ div: { color: "#2D2727"} }}
-                transform={index % 2 === 1 ? (index === 1 ? "translateY(30px)" : "translateY(-30px)") : ""}
+                transform={index % 2 === 1 ? (index === 1 ? "translateY(25px)" : "translateY(-35px)") : ""}
               >
                 <Stack pb={8} alignItems={["right", "center"]}>
                   <Circle

@@ -64,7 +64,7 @@ const SwitchTimeline = () => {
                 key={item?.id}
                 py={[10]}
                 _hover={{ div: { color: "#2D2727" } }}
-                transform={index % 2 === 1 ? (index === 1 ? "translateY(30px)" : "translateY(-30px)") : ""}
+                transform={index % 2 === 1 ? (index === 1 ? "translateY(25px)" : "translateY(-35px)") : ""}
               >
                 <Stack pb={8} alignItems={["right", "center"]}>
                   <Circle
@@ -82,7 +82,7 @@ const SwitchTimeline = () => {
 
                 <Stack
                   borderRadius="5px"
-                  w={["auto", 250]}
+                  w={["auto", 230]}
                   p={3}
                   bg="#f7f7f9"
                   _hover={{ bg: "#f54444", color: "#fff" }}
