@@ -25,6 +25,7 @@ import { FaHandPointUp } from "react-icons/fa";
 
 const breadcrumb = [
   { text: "Home", link: "/" },
+  { text: "Interactive Videos", link: "/interactive-video" },
   { text: "Hot Spot", link: "features/hotspot" },
 ];
 
@@ -33,167 +34,141 @@ const HotSpot = () => {
     <>
       <Banner title="Hot Spot" breadcrumb={breadcrumb} />
       <PageContainer>
-        <Box p={[5, 20]}>
-          <SimpleGrid columns={[1, 2]} spacing={3}>
-            {HOTSPOTTEXT.map((item, index) => (
-              <>
-                <Box key={index}>
-                  <VideoPlayer
-                    p={10}
-                    h="100%"
-                    videodata={{
-                      thumbnail: item.img,
-                      videosrc: "https://videostori.io/v/l4/IVyEio",
-                    }}
-                  />
-                </Box>
-                <Box key={index} px={10} alignItems="center">
-                  <Heading pb={15} color={"gray.700"} size={["md", "2xl"]}>
-                    {item.heading}
-                  </Heading>
-                  <Text py={10} color={"grey.300"} fontSize="md">
-                    {item.paragraph1}
-                  </Text>
-                  <Text color={"grey.300"} fontSize="md">
-                    {item.paragraph2}
-                  </Text>
-                </Box>
-              </>
-            ))}
-          </SimpleGrid>
-        </Box>
-
-        <Box p={[5, 20]}>
-          <SimpleGrid columns={[1, 2]} spacing={3}>
+      <Box p={[5, 20]}>
+        <SimpleGrid columns={[1, 2]} spacing={3}>
+          {HOTSPOTTEXT.map((item, index) => (
             <>
-              <Stack px={5}>
-                {HOTSPOTCARD1.map((item, index) => (
-                  <Card
-                    direction={{ base: "column", sm: "row" }}
-                    overflow="hidden"
-                    boxShadow={"2xl"}
-                  >
-                    <Center ms="5" py={2}>
-                      <Icon w={100} h={100} cursor="pointer" color="red.500">
-                        {item.icon}
-                      </Icon>
-                    </Center>
-                    <Stack>
-                      <CardBody>
-                        <Heading size="md" color={"gray.700"}>
-                          {item.heading}
-                        </Heading>
-                        <Text py="2">{item.paragraph}</Text>
-                      </CardBody>
-                    </Stack>
-                  </Card>
-                ))}
-              </Stack>
-              <Box>
-                <Image src="/assets/img5.png"></Image>
+              <Box key={index}>
+                <VideoPlayer
+                  p={10}
+                  h='100%'
+                  videodata={{
+                    thumbnail: item.img,
+                    videosrc: "https://videostori.io/v/l4/IVyEio",
+                  }}
+                />
+              </Box>
+              <Box key={index} px={10} alignItems='center'>
+                <Heading pb={15} color={'gray.700'} size={['md', '2xl']}>{item.heading}</Heading>
+                <Text py={10} color={"grey.300"} fontSize="md">
+                  {item.paragraph1}
+                </Text>
+                <Text color={"grey.300"} fontSize="md">
+                  {item.paragraph2}
+                </Text>
               </Box>
             </>
-          </SimpleGrid>
-        </Box>
+          ))}
+        </SimpleGrid>
+      </Box>
 
-        <Box p={[5, 20]}>
-          <SimpleGrid columns={[1, 2]} spacing={3}>
-            <>
-              <Box>
-                <Image src="/assets/img5.png"></Image>
-              </Box>
-              <Stack px={5}>
-                {HOTSPOTCARD2.map((item, index) => (
-                  <Card
-                    direction={{ base: "column", sm: "row" }}
-                    overflow="hidden"
-                    boxShadow={"2xl"}
-                  >
-                    <Center ms="5" py={2}>
-                      <Icon w={100} h={100} cursor="pointer" color="red.500">
-                        {item.icon}
-                      </Icon>
-                    </Center>
-                    <Stack>
-                      <CardBody>
-                        <Heading size="md" color={"gray.700"}>
-                          {item.heading}
-                        </Heading>
-                        <Text py="2">{item.paragraph}</Text>
-                      </CardBody>
-                    </Stack>
-                  </Card>
-                ))}
-              </Stack>
-            </>
-          </SimpleGrid>
-        </Box>
+      <Box p={[5, 20]}>
+        <SimpleGrid columns={[1, 2]} spacing={3}>
+          <>
+            <Stack px={5}>
+              {HOTSPOTCARD1.map((item, index) => (
+                <Card
+                  direction={{ base: "column", sm: "row" }}
+                  overflow="hidden"
+                  boxShadow={"2xl"}
+                >
+                  <Center ms="5" py={2}><Icon w={100} h={100} cursor="pointer" color='red.500'>{item.icon}</Icon></Center>
+                  <Stack>
+                    <CardBody>
+                      <Heading size="md" color={'gray.700'}>{item.heading}</Heading>
+                      <Text py="2">{item.paragraph}</Text>
+                    </CardBody>
+                  </Stack>
+                </Card>
+              ))}
+            </Stack>
+            <Box>
+              <Image src="/assets/img5.png"></Image>
+            </Box>
+          </>
+        </SimpleGrid>
+      </Box>
 
-        <Box p={[5, 20]}>
-          <SimpleGrid columns={[1, 2]} spacing={3}>
-            <>
-              <Stack px={5}>
-                {HOTSPOTCARD3.map((item, index) => (
-                  <Card
-                    direction={{ base: "column", sm: "row" }}
-                    overflow="hidden"
-                    boxShadow={"2xl"}
-                  >
-                    <Center ms="5" py={2}>
-                      <Icon w={100} h={100} cursor="pointer" color="red.500">
-                        {item.icon}
-                      </Icon>
-                    </Center>
-                    <Stack>
-                      <CardBody>
-                        <Heading size="md" color={"gray.700"}>
-                          {item.heading}
-                        </Heading>
-                        <Text py="2">{item.paragraph}</Text>
-                      </CardBody>
-                    </Stack>
-                  </Card>
-                ))}
-              </Stack>
-              <Box>
-                <Image src="/assets/img5.png"></Image>
-              </Box>
-            </>
-          </SimpleGrid>
-        </Box>
+      <Box p={[5, 20]}>
+        <SimpleGrid columns={[1, 2]} spacing={3}>
+          <>
+          <Box>
+              <Image src="/assets/img5.png"></Image>
+            </Box>
+            <Stack px={5}>
+              {HOTSPOTCARD2.map((item, index) => (
+                <Card
+                  direction={{ base: "column", sm: "row" }}
+                  overflow="hidden"
+                  boxShadow={"2xl"}
+                >
+                  <Center ms="5" py={2}><Icon w={100} h={100} cursor="pointer" color='red.500'>{item.icon}</Icon></Center>
+                  <Stack>
+                    <CardBody>
+                      <Heading size="md" color={'gray.700'}>{item.heading}</Heading>
+                      <Text py="2">{item.paragraph}</Text>
+                    </CardBody>
+                  </Stack>
+                </Card>
+              ))}
+            </Stack>
+          </>
+        </SimpleGrid>
+      </Box>
 
-        <Box p={[5, 20]}>
-          <SimpleGrid columns={[1, 2]} spacing={3}>
-            <>
-              <Box>
-                <Image src="/assets/img5.png"></Image>
-              </Box>
-              <Stack px={5}>
-                {HOTSPOTCARD4.map((item, index) => (
-                  <Card
-                    direction={{ base: "column", sm: "row" }}
-                    overflow="hidden"
-                    boxShadow={"2xl"}
-                  >
-                    <Center ms="5" py={2}>
-                      <Icon w={100} h={100} cursor="pointer" color="red.500">
-                        {item.icon}
-                      </Icon>
-                    </Center>
-                    <Stack>
-                      <CardBody>
-                        <Heading size="md" color={"gray.700"}>
-                          {item.heading}
-                        </Heading>
-                        <Text py="2">{item.paragraph}</Text>
-                      </CardBody>
-                    </Stack>
-                  </Card>
-                ))}
-              </Stack>
-            </>
-          </SimpleGrid>
-        </Box>
+      <Box p={[5, 20]}>
+        <SimpleGrid columns={[1, 2]} spacing={3}>
+          <>
+            <Stack px={5}>
+              {HOTSPOTCARD3.map((item, index) => (
+                <Card
+                  direction={{ base: "column", sm: "row" }}
+                  overflow="hidden"
+                  boxShadow={"2xl"}
+                >
+                  <Center ms="5" py={2}><Icon w={100} h={100} cursor="pointer" color='red.500'>{item.icon}</Icon></Center>
+                  <Stack>
+                    <CardBody>
+                      <Heading size="md" color={'gray.700'}>{item.heading}</Heading>
+                      <Text py="2">{item.paragraph}</Text>
+                    </CardBody>
+                  </Stack>
+                </Card>
+              ))}
+            </Stack>
+            <Box>
+              <Image src="/assets/img5.png"></Image>
+            </Box>
+          </>
+        </SimpleGrid>
+      </Box>
+
+      <Box p={[5, 20]}>
+        <SimpleGrid columns={[1, 2]} spacing={3}>
+          <>
+          <Box>
+              <Image src="/assets/img5.png"></Image>
+            </Box>
+            <Stack px={5}>
+              {HOTSPOTCARD4.map((item, index) => (
+                <Card
+                  direction={{ base: "column", sm: "row" }}
+                  overflow="hidden"
+                  boxShadow={"2xl"}
+                >
+                  <Center ms="5" py={2}><Icon w={100} h={100} cursor="pointer" color='red.500'>{item.icon}</Icon></Center>
+                  <Stack>
+                    <CardBody>
+                      <Heading size="md" color={'gray.700'}>{item.heading}</Heading>
+                      <Text py="2">{item.paragraph}</Text>
+                    </CardBody>
+                  </Stack>
+                </Card>
+              ))}
+            </Stack>
+          </>
+        </SimpleGrid>
+      </Box>
       </PageContainer>
     </>
   );
