@@ -198,6 +198,7 @@ const DesktopSubNav = ({ label, href, subLabel }) => {
     </Link>
   );
 };
+
 const MobileNav = () => {
   return (
     <Stack
@@ -215,12 +216,18 @@ const MobileNav = () => {
 const MobileNavItem = ({ label, children, href }) => {
   const { isOpen, onToggle } = useDisclosure();
 
+  const handleLabelClick = () => {
+    if (!children) {
+      window.location.href = href ?? '/';
+    }else{
+      window.location.href = '/interactive-video'
+    }
+  };
+
   return (
-    <Stack spacing={4} onClick={children && onToggle}>
+    <Stack spacing={4}>
       <Flex
         py={2}
-        as={Link}
-        href={href ?? "#"}
         justify={"space-between"}
         align={"center"}
         _hover={{
@@ -230,6 +237,8 @@ const MobileNavItem = ({ label, children, href }) => {
         <Text
           fontWeight={600}
           color={useColorModeValue("gray.600", "gray.200")}
+          onClick={handleLabelClick}
+          cursor={children ? 'pointer' : 'default'}
         >
           {label}
         </Text>
@@ -240,6 +249,8 @@ const MobileNavItem = ({ label, children, href }) => {
             transform={isOpen ? "rotate(180deg)" : ""}
             w={6}
             h={6}
+            onClick={onToggle}
+            cursor='pointer'
           />
         )}
       </Flex>
@@ -264,6 +275,7 @@ const MobileNavItem = ({ label, children, href }) => {
     </Stack>
   );
 };
+
 const NAV_ITEMS = [
   {
     label: "Home",
