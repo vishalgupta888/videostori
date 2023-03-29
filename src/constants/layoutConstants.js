@@ -9,8 +9,10 @@ export const interactText = {
 }
 export const blogText = {
     imageurl: '/assets/blogImage.jpg',
+    category: 'INTERACTIVE VIDEO',
     title: "Interactive Video: Benefits and Best Practices",
-    description:"Video has become an all pervasive communication and engagement tool with the Audience."
+    description:"Video has become an all pervasive communication and engagement tool with the Audience. With the...",
+    authordate: 'February 16, 2023',
 }
 
 export const leadText = [

@@ -54,7 +54,7 @@ export default function Footer() {
       <Flex
         direction={["column","row"]}
         position={"absolute"}
-        bottom={["19%","610px"]}
+        bottom={["190vh","610px"]}
         left="2%"
         w="96%"
         h={["40vh","26vh"]}
