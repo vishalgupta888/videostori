@@ -56,6 +56,7 @@ const ICONS = [
 
 const breadcrumb = [
   { text: "Home", link: "/" },
+  { text: "Interactive Videos", link: "/interactive-video" },
   { text: "Video Distribution", link: "features/videodistribution" },
 ];
 
@@ -64,45 +65,43 @@ const index = () => {
     <>
       <Banner title="Video Distribution" breadcrumb={breadcrumb} />
       <PageContainer>
-        <Box>
-          <ImageTextTable imageTextdata={VIDEODB} />
+      <Box>
+          <ImageTextTable
+            imageTextdata={VIDEODB}
+          />
         </Box>
 
-        <Box>
-          <Heading textAlign={"center"} color={"gray.700"}>
+      <Box>
+        <Heading textAlign={"center"} color={'gray.700'}>
             Distribution Channels for
-          </Heading>
-          <Flex
-            flexWrap={"wrap"}
-            justifyContent={"center"}
-            alignItems="center"
-            my="70px"
-          >
-            {ICONS.map((item) => {
-              return (
-                <Box
-                  key={item.id}
-                  h="160px"
-                  display="flex"
-                  flexDirection={"column"}
-                  alignItems="center"
-                  justifyContent="center"
-                  w="190px"
-                  m="20px"
-                  boxShadow="rgba(100, 100, 111, 0.2) 0px 7px 29px 0px"
-                  _hover={{ bg: "black", color: "#fff", cursor: "pointer" }}
-                >
-                  <Icon ms="30" boxSize={20} color="red.500">
-                    {item.icon}
-                  </Icon>
-                  <Text fontSize={"lg"} p={1} fontWeight={"bold"}>
-                    {item.text}
-                  </Text>
-                </Box>
-              );
-            })}
-          </Flex>
-        </Box>
+        </Heading>
+        <Flex
+          flexWrap={"wrap"}
+          justifyContent={"center"}
+          alignItems="center"
+          my="70px"
+        >
+          {ICONS.map((item) => {
+            return (
+              <Box
+                key={item.id}
+                h="160px"
+                display="flex"
+                flexDirection={"column"}
+                alignItems="center"
+                justifyContent="center"
+                w="190px"
+                m="20px"
+                boxShadow="rgba(100, 100, 111, 0.2) 0px 7px 29px 0px"
+                _hover={{ bg: "black", color: "#fff", cursor: "pointer" }}
+              >
+                <Icon ms="30" boxSize={20} color="red.500" _hover={{color: "#fff", cursor: "pointer" }}>{item.icon}</Icon>
+                <Text fontSize={'lg'} p={1} fontWeight={'bold'}>{item.text}</Text>
+              </Box>
+            );
+          })}
+        </Flex>
+      </Box>
       </PageContainer>
     </>
   );
