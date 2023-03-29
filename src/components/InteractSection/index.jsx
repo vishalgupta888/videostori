@@ -50,7 +50,7 @@ const CARDS = [
 const InteractSection = (props) => {
   return (
     <>
-      <Box h="auto" bg="#fff" px={10} py={10}>
+      <Box h="auto" bg="#fff" px={10} py={10} className='hidden'>
         <Box py={20}>
           <Center>
             <Heading

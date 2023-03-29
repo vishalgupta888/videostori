@@ -67,6 +67,7 @@ export default function Carousel() {
 
   return (
     <Box
+      className="hidden"
       position={"relative"}
       minH={"100vh"}
       width={["100%", "85%"]}
