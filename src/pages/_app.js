@@ -27,7 +27,7 @@ export default function App({ Component, pageProps }) {
   return <ChakraProvider theme={theme}>
 
     <Navbar />
-    <Box className='hidden'>
+    <Box>
     <SEOContainer seoData={SEO}/>
       <Component {...pageProps} />
     </Box>

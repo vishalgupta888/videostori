@@ -50,13 +50,13 @@ export default function Navbar() {
           <IconButton
             onClick={onToggle}
             icon={
-              isOpen ? <CloseIcon w={3} h={3} /> : <HamburgerIcon w={5} h={5} />
+              isOpen ? <CloseIcon w={4} h={4} /> : <HamburgerIcon w={8} h={8} />
             }
             variant={"ghost"}
             aria-label={"Toggle Navigation"}
           />
         </Flex>
-        <Flex flex={{ base: 1 }} justify={{ base: "center", md: "start" }}>
+        <Flex flex={{ base: 2 }} justify={{ base: "end", md: "start" }}>
           <Image h="70px" w="170px" src="/assets/videoLogo.jpg" />
 
           <Flex

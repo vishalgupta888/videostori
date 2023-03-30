@@ -12,7 +12,7 @@ import {
     return (
       <Stack minH={'135vh'} bg='#13161F' direction={{ base: 'column', md: 'row' }}>
         <Flex flex={1} p={[4,8]} align={'center'} justify={'center'}>
-          <Stack spacing={['50px', 8]} w={'full'} maxW={'lg'}>
+          <Stack className='hidden' spacing={['50px', 8]} w={'full'} maxW={'lg'}>
             <Heading fontSize={{ base: '3xl', md: '4xl', lg: '5xl' }}>
              
               <Text color={'white'} as={'span'}>
@@ -38,7 +38,7 @@ import {
             </Stack>
           </Stack>
         </Flex>
-        <Flex flex={1}>
+        <Flex className='hidden' flex={1}>
           <Image
             alignSelf={['none','center']}
             mx={['auto','none']}
