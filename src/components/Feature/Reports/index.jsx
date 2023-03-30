@@ -41,7 +41,7 @@ const index = () => {
         <Heading color="gray.700"> Channel-Specific Analytics</Heading>
       </Center>
 
-      <SimpleGrid columns={[1,4]} spacing={10} px={10} py={15}>
+      <SimpleGrid className="hidden" columns={[1,4]} spacing={10} px={10} py={15}>
       {REPORTCARDS.map((item, index) => {
         return(
         <Box key={index} textAlign="center" boxShadow={'xl'} p={5} bg={'white.100'} _hover={{ bgImage: "http://web.msdi.in/wp-content/uploads/2023/01/info_hover_bg.jpg", color: "white", cursor: "pointer" }}>
