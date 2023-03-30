@@ -120,7 +120,7 @@ const SwitchTimeline = () => {
         </Text>
       </Center>
 
-      <SimpleGrid columns={[1, 4]} spacing={10} px={10} py={10}>
+      <SimpleGrid className="hidden" columns={[1, 4]} spacing={10} px={10} py={10}>
         {SWITCHTIMELINE_CARDS2.map((item, index) => {
           return (
             <Box key={index} boxShadow={"2xl"} p={5} bg={"white.400"}>

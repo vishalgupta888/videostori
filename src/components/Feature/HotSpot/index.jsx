@@ -34,7 +34,7 @@ const HotSpot = () => {
     <>
       <Banner title="Hot Spot" breadcrumb={breadcrumb} />
       <PageContainer>
-      <Box p={[5, 20]}>
+      <Box className="hidden" p={[5, 20]}>
         <SimpleGrid columns={[1, 2]} spacing={3}>
           {HOTSPOTTEXT.map((item, index) => (
             <>
@@ -62,7 +62,7 @@ const HotSpot = () => {
         </SimpleGrid>
       </Box>
 
-      <Box p={[5, 20]}>
+      <Box className="hidden" p={[5, 20]}>
         <SimpleGrid columns={[1, 2]} spacing={3}>
           <>
             <Stack px={5}>
@@ -89,7 +89,7 @@ const HotSpot = () => {
         </SimpleGrid>
       </Box>
 
-      <Box p={[5, 20]}>
+      <Box className="hidden" p={[5, 20]}>
         <SimpleGrid columns={[1, 2]} spacing={3}>
           <>
           <Box>
@@ -116,7 +116,7 @@ const HotSpot = () => {
         </SimpleGrid>
       </Box>
 
-      <Box p={[5, 20]}>
+      <Box className="hidden" p={[5, 20]}>
         <SimpleGrid columns={[1, 2]} spacing={3}>
           <>
             <Stack px={5}>
@@ -143,7 +143,7 @@ const HotSpot = () => {
         </SimpleGrid>
       </Box>
 
-      <Box p={[5, 20]}>
+      <Box className="hidden" p={[5, 20]}>
         <SimpleGrid columns={[1, 2]} spacing={3}>
           <>
           <Box>
