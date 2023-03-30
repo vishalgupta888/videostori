@@ -145,7 +145,7 @@ const InteractiveVideo = () => {
         >
           Interactive video with interactive Elements
         </Heading>
-        <SimpleGrid columns={[2, 6]} mx="auto">
+        <SimpleGrid columns={[2, 6]} mx="auto" my={[14]}>
           {itemData.map((item) => {
             return (
               <GridItem
