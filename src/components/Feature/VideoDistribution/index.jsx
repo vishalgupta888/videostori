@@ -71,8 +71,8 @@ const index = () => {
           />
         </Box>
 
-      <Box>
-        <Heading textAlign={"center"} color={'gray.700'}>
+        <Box className="hidden">
+          <Heading textAlign={"center"} color={"gray.700"}>
             Distribution Channels for
         </Heading>
         <Flex

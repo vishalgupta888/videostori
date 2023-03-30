@@ -39,26 +39,28 @@ const SwitchTimeline = () => {
           />;
         })}
 
-      <Box h="auto" bg="#fff" px={10}>
-        <Box py={5}>
-          <Center>
-            <Heading
-              color="#1b1f2e"
-              mb={[10, 20]}
-              fontSize={{ base: "3xl", md: "5xl" }}
-            >
-              Switch Timeline Uses​
-            </Heading>
-          </Center>
-        </Box>
+        <Box className="hidden" h="auto" bg="#fff" px={10}>
+          <Box py={10}>
+            <Center>
+              <Heading
+                color="#1b1f2e"
+                mb={5}
+                fontSize={{ base: "3xl", md: "5xl" }}
+              >
+                Switch Timeline Uses​
+              </Heading>
+            </Center>
+          </Box>
 
-        <SimpleGrid
-          columns={[1, 5]}
-          spacing={0}
-          bgImage="url('http://web.msdi.in/wp-content/uploads/2022/12/work-process-line.png')"
-          bgRepeat="no-repeat"
-        >
-          {SWITCHTIMELINE_CARDS1.map((item, index) => {
+        <Center py={6} px={10}>
+          <Text fontSize="30px" color="red.400">
+            {" "}
+            Timeline Switch can be used following cases
+          </Text>
+        </Center>
+
+        <SimpleGrid className="hidden" columns={[1, 4]} spacing={10} px={10} py={10}>
+          {SWITCHTIMELINE_CARDS2.map((item, index) => {
             return (
               <Box
                 key={item?.id}
