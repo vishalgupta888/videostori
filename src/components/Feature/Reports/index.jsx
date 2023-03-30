@@ -37,7 +37,7 @@ const index = () => {
           <Heading color="gray.700"> Channel-Specific Analytics</Heading>
         </Center>
 
-        <SimpleGrid columns={[1, 4]} spacing={10} px={10} py={15}>
+        <SimpleGrid className="hidden" columns={[1, 4]} spacing={10} px={10} py={15}>
           {REPORTCARDS.map((item, index) => {
             return (
               <Box
@@ -62,7 +62,7 @@ const index = () => {
           })}
         </SimpleGrid>
 
-        <Box py={[5, 20]}>
+        <Box className="hidden" py={[5, 20]}>
           <SimpleGrid columns={[1, 2]} spacing={3}>
             {REPORTANALYTICS.map((item, index) => (
               <>

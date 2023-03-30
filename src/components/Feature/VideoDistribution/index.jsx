@@ -68,7 +68,7 @@ const index = () => {
           <ImageTextTable imageTextdata={VIDEODB} />
         </Box>
 
-        <Box>
+        <Box className="hidden">
           <Heading textAlign={"center"} color={"gray.700"}>
             Distribution Channels for
           </Heading>
