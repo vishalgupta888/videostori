@@ -1450,12 +1450,6 @@ focus-lock@^0.11.6:
   dependencies:
     tslib "^2.0.3"
 
-<<<<<<< HEAD
-framer-motion@^10.9.2:
-  version "10.9.2"
-  resolved "https://registry.yarnpkg.com/framer-motion/-/framer-motion-10.9.2.tgz#e5a667ea69ad62f69b3897b312edc8aeed49bdf1"
-  integrity sha512-qNhnSAO0rd4A2GI93Y5SlljdBQEP6u/y98tX6esz48WxGPhHfePRfEmp9acUHOvxE+e9p3M/RbSDsoGkXTeqRA==
-=======
 for-each@^0.3.3:
   version "0.3.3"
   resolved "https://registry.yarnpkg.com/for-each/-/for-each-0.3.3.tgz#69b447e88a0a5d32c3e7084f3f1710034b21376e"
@@ -1467,7 +1461,6 @@ framer-motion@^10.2.4:
   version "10.2.4"
   resolved "https://registry.yarnpkg.com/framer-motion/-/framer-motion-10.2.4.tgz#e728a34c5c208aef4ee2b829409e0f59c7d6405c"
   integrity sha512-0a5yR1jwOfSO0jJEpZUrgWYEa1EPU2yGVmytSu+uMYWV7bcFHwaHVYz2GchzWPH1rW7nXg8zmw8cp4+zNJJaUA==
->>>>>>> origin/hemant/videostori
   dependencies:
     tslib "^2.4.0"
   optionalDependencies:
@@ -2077,12 +2070,6 @@ scheduler@^0.23.0:
   dependencies:
     loose-envify "^1.1.0"
 
-<<<<<<< HEAD
-slick-carousel@^1.8.1:
-  version "1.8.1"
-  resolved "https://registry.npmjs.org/slick-carousel/-/slick-carousel-1.8.1.tgz"
-  integrity sha512-XB9Ftrf2EEKfzoQXt3Nitrt/IPbT+f1fgqBdoxO3W/+JYvtEOW6EgxnWfr9GH6nmULv7Y2tPmEX3koxThVmebA==
-=======
 semver@^6.3.0:
   version "6.3.0"
   resolved "https://registry.yarnpkg.com/semver/-/semver-6.3.0.tgz#ee0a64c8af5e8ceea67687b133761e1becbd1d3d"
@@ -2096,7 +2083,11 @@ side-channel@^1.0.4:
     call-bind "^1.0.0"
     get-intrinsic "^1.0.2"
     object-inspect "^1.9.0"
->>>>>>> origin/hemant/videostori
+
+slick-carousel@^1.8.1:
+  version "1.8.1"
+  resolved "https://registry.yarnpkg.com/slick-carousel/-/slick-carousel-1.8.1.tgz#a4bfb29014887bb66ce528b90bd0cda262cc8f8d"
+  integrity sha512-XB9Ftrf2EEKfzoQXt3Nitrt/IPbT+f1fgqBdoxO3W/+JYvtEOW6EgxnWfr9GH6nmULv7Y2tPmEX3koxThVmebA==
 
 source-map-js@^1.0.2:
   version "1.0.2"
