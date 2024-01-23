@@ -1,5 +1,16 @@
 # VideoStori
 
-Videostori is a cutting-edge, multi-page ReactJS application that seamlessly blends exceptional design with captivating animations to deliver an immersive and visually stunning storytelling experience. This project showcases my proficiency in front-end development, user interface (UI) design, and animation techniques, pushing the boundaries of what's possible in web development.
+Videostori is a cutting-edge, multi-page ReactJS application that seamlessly blends exceptional design with captivating animations to deliver an immersive and visually stunning storytelling experience. 
+This project showcases my proficiency in front-end development, user interface (UI) design, and animation techniques, pushing the boundaries of what's possible in web development.
 
-[View website here]("https://venerable-babka-b6261a.netlify.app/")
+View website here : https://venerable-babka-b6261a.netlify.app/
+
+Technologies Used:
+
+ReactJS
+HTML5
+Chakra UI
+JavaScript (ES6+)
+React Router
+Animation Libraries (Framer Motion)
+Responsive Design Techniques
